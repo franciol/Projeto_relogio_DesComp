@@ -4,7 +4,7 @@ USE ieee.std_logic_1164.ALL;
 ENTITY muxGenerico2 IS
     GENERIC (
         -- Total de bits das entradas e saidas
-        larguraDados : NATURAL := 8
+        larguraDadosEntrada : NATURAL := 8
 
     );
     PORT (

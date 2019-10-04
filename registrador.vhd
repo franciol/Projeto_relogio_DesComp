@@ -2,6 +2,7 @@
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 
+
 ENTITY registradorGenerico IS
     GENERIC (
         larguraDados : NATURAL := 8

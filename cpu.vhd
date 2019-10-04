@@ -4,10 +4,12 @@ USE ieee.numeric_std.ALL;
 
 ENTITY cpu IS
     GENERIC (
+        larguraBarramentoImediato : NATURAL := 16;
         larguraBarramentoEnderecos : NATURAL := 8;
         larguraBarramentoDados : NATURAL := 4
     );
     PORT (
+        reset : IN STD_LOGIC;
         clk : IN STD_LOGIC;
         barramentoDadosEntrada : IN STD_LOGIC_VECTOR(larguraBarramentoDados - 1 DOWNTO 0);
         barramentoEnderecos : OUT STD_LOGIC_VECTOR(larguraBarramentoEnderecos - 1 DOWNTO 0);
@@ -17,84 +19,89 @@ ENTITY cpu IS
     );
 END ENTITY;
 
-ARCHITECTURE estrutural OF relogio IS
+ARCHITECTURE estrutural OF cpu IS
 
     -- Declaração de sinais auxiliares
-    SIGNAL saida_adder, saida_MUXJMP, saida_PC, saida_imediata, saida_MUX, saida_ACU, saida_ULA : STD_LOGIC_VECTOR(larguraBarramentoDados - 1 DOWNTO 0);
-    SIGNAL seletor_MUX, hab_ACU, hab_AND, hab_OR, saida_AND, saida_OR : STD_LOGIC;
+    SIGNAL saida_imediata : STD_LOGIC_VECTOR(larguraBarramentoImediato - 1 DOWNTO 0);
+    SIGNAL saida_adder, saida_MUXJMP, saida_PC : STD_LOGIC_VECTOR(larguraBarramentoEnderecos - 1 DOWNTO 0);
+    SIGNAL saida_MUX, saida_ACU, saida_ULA : STD_LOGIC_VECTOR((larguraBarramentoDados - 1) DOWNTO 0);
     SIGNAL seletorULA : STD_LOGIC_VECTOR(1 DOWNTO 0);
+    SIGNAL seletor_MUX, hab_ACU, hab_AND, hab_OR, saida_AND, saida_OR : STD_LOGIC;
+
     -- ...
 
 BEGIN
 
     MUXJMP : ENTITY work.muxGenerico2
         GENERIC MAP(
-            larguraDados => larguraBarramentoDados
+            larguraDados => larguraBarramentoEnderecos
         )
-    PORT MAP
-    (
-        entradaA_MUX => saida_imediata,
-        entradaB_MUX => saida_adder,
-        seletor_MUX => saida_OR,
-        saida_MUX => saida_MUXJMP
-    );
+        PORT MAP
+        (
+            entradaA_MUX => saida_imediata(7 DOWNTO 0),
+            entradaB_MUX => saida_adder,
+            seletor_MUX => saida_OR,
+            saida_MUX => saida_MUXJMP
+        );
 
     MUX : ENTITY work.muxGenerico2
         GENERIC MAP(
             larguraDados => larguraBarramentoDados
         )
-    PORT MAP
-    (
-        entradaA_MUX => barramentoDadosEntrada,
-        entradaB_MUX => saida_ULA,
-        seletor_MUX => seletor_MUX,
-        saida_MUX => saida_MUX
-    );
-
-    ACU : ENTITY work.registrador
-        --generic map (
-        -- );
         PORT MAP
         (
-            clk => clk,
-            enable => hab_ACU,
-            reset => '0',
+            entradaA_MUX => barramentoDadosEntrada,
+            entradaB_MUX => saida_ULA,
+            seletor_MUX => seletor_MUX,
+            saida_MUX => saida_MUX
+        );
+
+    ACU : ENTITY work.registradorGenerico
+        GENERIC MAP(
+            larguraDados => larguraBarramentoDados
+        )
+        PORT MAP
+        (
+            CLK => clk,
+            ENABLE => hab_ACU,
+            RST => reset,
             DIN => saida_MUX,
             DOUT => saida_ACU
         );
 
     PC : ENTITY work.registradorGenerico
-        -- generic map (
-        -- );
+        GENERIC MAP(
+            larguraDados => larguraBarramentoEnderecos
+        )
         PORT MAP
         (
-            clk => clk,
-            enable => '1',
-            reset => '0',
+            CLK => clk,
+            ENABLE => '1',
+            RST => reset,
             DIN => saida_MUXJMP,
             DOUT => saida_PC
         );
 
     ADDER : ENTITY work.somaConstanteGenerico
         GENERIC MAP(
-            larguraDados => larguraBarramentoDados,
+            larguraDados => larguraBarramentoEnderecos,
             incremento => 1
         )
-    PORT MAP
-    (
-        entrada => saida_PC,
-        saida => saida_adder
-    );
+        PORT MAP
+        (
+            entrada => saida_PC,
+            saida => saida_adder
+        );
 
-    ROM : ENTITY work.mem_instrucoes
+    ROM : ENTITY work.memoria
         GENERIC MAP(
-            dataWidth => larguraBarramentoDados,
-            addrWitdh => larguraBarramentoEnderecos
+            dataWidth => larguraBarramentoImediato,
+            addrWidth => larguraBarramentoEnderecos
         )
-    PORT MAP(
-        Endereco => saida_PC,
-        Dado => saida_imediata
-    );
+        PORT MAP(
+            Endereco => saida_PC,
+            Dado => saida_imediata
+        );
 
     OR1 : ENTITY work.ORGenerico
         PORT MAP(
@@ -103,22 +110,39 @@ BEGIN
             SAIDA => saida_OR
         );
 
-    AND1 : ENTITY work.ORGenerico
+    AND1 : ENTITY work.ANDGenerico
         PORT MAP(
             ENTRADA_A => saida_ULA,
             ENTRADA_B => hab_AND,
-            SAIDA => saida_AND
+            SAIDA => saida_AND,
+				CLK => clk
         );
 
     ULA : ENTITY work.ULAGenerico
         GENERIC MAP(
-            larguraDados => 2
+            larguraDados => 4
         )
         PORT MAP(
-            ENTRADA_A => saida_imediata,
+            ENTRADA_A => saida_imediata(3 DOWNTO 0),
             ENTRADA_B => saida_ACU,
             SAIDA => saida_ULA,
             INSTRUCAO => seletorULA,
             CLK => clk
         );
+
+    UC : ENTITY work.UCGenerico
+        PORT MAP(
+            clk => clk,
+            barramentoEntrada => saida_imediata,
+            OPCODE => seletorULA,
+            MUXJUMPHAB => hab_OR,
+            MUXHAB => seletor_MUX,
+            HABANDCOMPARE => hab_AND,
+            HABACU => hab_ACU,
+            readEnable => readEnable,
+            writeEnable => writeEnable
+        );
+
+    barramentoDadosSaida <= saida_ACU;
+    barramentoEnderecos <= saida_imediata(7 DOWNTO 0);
 END ARCHITECTURE;

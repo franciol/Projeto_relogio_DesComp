@@ -16,7 +16,7 @@ ENTITY ULAGenerico IS
 END ENTITY;
 
 ARCHITECTURE comportamento OF ULAGenerico IS
-    SIGNAL us_A, us_B, us_saida : unsigned(7 DOWNTO 0);
+    SIGNAL us_A, us_B, us_saida : unsigned(larguraDados-1 DOWNTO 0);
 BEGIN
     PROCESS (ALL)
     BEGIN
@@ -27,6 +27,8 @@ BEGIN
                 us_saida <= us_A + us_B;
             ELSIF (INSTRUCAO = "01") THEN
                 us_saida <= us_A - us_B;
+				ELSIF (INSTRUCAO = "10") THEN
+                us_saida <= us_A;
             END IF;
             SAIDA <= std_logic_vector(us_saida);
         END IF;
