@@ -33,8 +33,8 @@ BEGIN
 			MUXHAB <= barramentoEntrada(12);
 			HABANDCOMPARE <= barramentoEntrada(11);
 			HABACU <= barramentoEntrada(10);
-			readEnable <= barramentoEntrada(9);
-			writeEnable <= barramentoEntrada(8);
+			readEnable <= barramentoEntrada(8);
+			writeEnable <= barramentoEntrada(9);
 			
 		END IF;
 	END PROCESS;

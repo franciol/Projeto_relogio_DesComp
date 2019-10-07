@@ -1,0 +1,362 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/simulation/qsim
+Ecpu
+Z1 w1570460346
+Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
+Z3 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
+Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z5 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z9 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+R0
+Z10 8RELOGIO_MK1.vho
+Z11 FRELOGIO_MK1.vho
+l0
+L36
+V>@CIHM<k<2^:ANI_R=[bT2
+!s100 5V_]=YZh1=i_]9cm`DOlF1
+Z12 OV;C;10.5b;63
+32
+Z13 !s110 1570460347
+!i10b 1
+Z14 !s108 1570460347.000000
+Z15 !s90 -work|work|RELOGIO_MK1.vho|
+Z16 !s107 RELOGIO_MK1.vho|
+!i113 1
+Z17 o-work work
+Z18 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 3 cpu 0 22 >@CIHM<k<2^:ANI_R=[bT2
+l136
+L54
+VIUWi67:lE^PY[JR]LUgOS2
+!s100 [<aIA=V9BbI8U;^GC=Yh23
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18
+Ecpu_vhd_vec_tst
+Z19 w1570460345
+R7
+R8
+R0
+Z20 8Waveform7.vwf.vht
+Z21 FWaveform7.vwf.vht
+l0
+L31
+V3Lzn6JdmTSn04embB2`PI0
+!s100 4RSMI>IfMGJ]_oD;>2_ej2
+R12
+32
+R13
+!i10b 1
+R14
+Z22 !s90 -work|work|Waveform7.vwf.vht|
+Z23 !s107 Waveform7.vwf.vht|
+!i113 1
+R17
+R18
+Acpu_arch
+R7
+R8
+DEx4 work 15 cpu_vhd_vec_tst 0 22 3Lzn6JdmTSn04embB2`PI0
+l66
+L33
+V;YCnAIn7Y_oGIkQdL]EYS2
+!s100 UPHB9=jXe7Ki9P_@^e?ho2
+R12
+32
+R13
+!i10b 1
+R14
+R22
+R23
+!i113 1
+R17
+R18
+Emuxgenerico2
+Z24 w1570453718
+R4
+R2
+R6
+R7
+R8
+R3
+R0
+R10
+R11
+l0
+L34
+VV0E`TXN<Q=[I<@JGMT>8f2
+!s100 9PhLhIRdO2iJ::J>z3Fa80
+R12
+32
+Z25 !s110 1570453718
+!i10b 1
+Z26 !s108 1570453718.000000
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R4
+R2
+R6
+R7
+R8
+R3
+DEx4 work 12 muxgenerico2 0 22 V0E`TXN<Q=[I<@JGMT>8f2
+l91
+L43
+V>2JcXTl3QiQahLgz:;UF91
+!s100 `bca4e=3kK4L`@:3M_n@D3
+R12
+32
+R25
+!i10b 1
+R26
+R15
+R16
+!i113 1
+R17
+R18
+Emuxgenerico2_vhd_vec_tst
+Z27 w1570453716
+R7
+R8
+R0
+Z28 8Waveform5.vwf.vht
+Z29 FWaveform5.vwf.vht
+l0
+L31
+VT:>a7GVRkG]W<64f4NCXV2
+!s100 eCK`O@2^b3M32eO]COM>o0
+R12
+32
+R25
+!i10b 1
+R26
+Z30 !s90 -work|work|Waveform5.vwf.vht|
+Z31 !s107 Waveform5.vwf.vht|
+!i113 1
+R17
+R18
+Amuxgenerico2_arch
+R7
+R8
+DEx4 work 24 muxgenerico2_vhd_vec_tst 0 22 T:>a7GVRkG]W<64f4NCXV2
+l48
+L33
+VOcmRKHo[Jl3Q`Cn5@TQeH3
+!s100 :XbQ9>=NEcD:7@6Nmi;K02
+R12
+32
+R25
+!i10b 1
+R26
+R30
+R31
+!i113 1
+R17
+R18
+Erelogio
+Z32 w1570466114
+R4
+R2
+R6
+R7
+R8
+R3
+R0
+R10
+R11
+l0
+L34
+VbH8ghH4D;OEZ_ck74U>DY3
+!s100 dNTNDW9;3Od><inIX:L:]2
+R12
+32
+Z33 !s110 1570466115
+!i10b 1
+Z34 !s108 1570466115.000000
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R4
+R2
+R6
+R7
+R8
+R3
+DEx4 work 7 relogio 0 22 bH8ghH4D;OEZ_ck74U>DY3
+l110
+L47
+Vhhd8a@7]L2IBBSiN0`W=J0
+!s100 :j]GSjH4?G90DB4?bSIAF0
+R12
+32
+R33
+!i10b 1
+R34
+R15
+R16
+!i113 1
+R17
+R18
+Erelogio_vhd_vec_tst
+Z35 w1570466113
+R7
+R8
+R0
+Z36 8Waveform8.vwf.vht
+Z37 FWaveform8.vwf.vht
+l0
+L31
+V8fAT_NVeRUO1cLeCafeg51
+!s100 YRTn@SE;O[:Pz_Zn_SZcH2
+R12
+32
+R33
+!i10b 1
+R34
+Z38 !s90 -work|work|Waveform8.vwf.vht|
+Z39 !s107 Waveform8.vwf.vht|
+!i113 1
+R17
+R18
+Arelogio_arch
+R7
+R8
+Z40 DEx4 work 19 relogio_vhd_vec_tst 0 22 8fAT_NVeRUO1cLeCafeg51
+l56
+L33
+Z41 VzkFImXn9_G=?M18@0OoRB1
+Z42 !s100 2H=Z460`dQS<LBMUl44`N2
+R12
+32
+R33
+!i10b 1
+R34
+R38
+R39
+!i113 1
+R17
+R18
+Eulagenerico
+Z43 w1570453854
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R0
+R10
+R11
+l0
+L36
+VgT;HimWM=PI3fL7dLZQEB0
+!s100 MJ;JG4LYc<zGCKPc`HW[U2
+R12
+32
+Z44 !s110 1570453854
+!i10b 1
+Z45 !s108 1570453854.000000
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 11 ulagenerico 0 22 gT;HimWM=PI3fL7dLZQEB0
+l81
+L46
+VeccE[TZj>ob1Z7Ym5_`@=1
+!s100 ORKcje>ND4coGlR<AHOBV0
+R12
+32
+R44
+!i10b 1
+R45
+R15
+R16
+!i113 1
+R17
+R18
+Eulagenerico_vhd_vec_tst
+Z46 w1570453853
+R7
+R8
+R0
+Z47 8Waveform6.vwf.vht
+Z48 FWaveform6.vwf.vht
+l0
+L31
+VzV@0fI5D57nU1QVVW1JTJ2
+!s100 Y:CL4nzfQf`l5Cf4I=VEb1
+R12
+32
+R44
+!i10b 1
+R45
+Z49 !s90 -work|work|Waveform6.vwf.vht|
+Z50 !s107 Waveform6.vwf.vht|
+!i113 1
+R17
+R18
+Aulagenerico_arch
+R7
+R8
+DEx4 work 23 ulagenerico_vhd_vec_tst 0 22 zV@0fI5D57nU1QVVW1JTJ2
+l50
+L33
+VFW`ng8=9^XF]RH;8n<Xgg3
+!s100 JlkzP8SRzog:TUA7UzBmC2
+R12
+32
+R44
+!i10b 1
+R45
+R49
+R50
+!i113 1
+R17
+R18

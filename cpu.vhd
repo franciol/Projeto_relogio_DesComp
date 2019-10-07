@@ -12,8 +12,8 @@ ENTITY cpu IS
         reset : IN STD_LOGIC;
         clk : IN STD_LOGIC;
         barramentoDadosEntrada : IN STD_LOGIC_VECTOR(larguraBarramentoDados - 1 DOWNTO 0);
-        barramentoEnderecos : OUT STD_LOGIC_VECTOR(larguraBarramentoEnderecos - 1 DOWNTO 0);
         barramentoDadosSaida : OUT STD_LOGIC_VECTOR(larguraBarramentoDados - 1 DOWNTO 0);
+        barramentoEnderecos : OUT STD_LOGIC_VECTOR(larguraBarramentoEnderecos-1 DOWNTO 0);
         readEnable : OUT STD_LOGIC;
         writeEnable : OUT STD_LOGIC
     );
@@ -31,17 +31,63 @@ ARCHITECTURE estrutural OF cpu IS
     -- ...
 
 BEGIN
-
-    MUXJMP : ENTITY work.muxGenerico2
+    PC : ENTITY work.registradorGenerico
         GENERIC MAP(
             larguraDados => larguraBarramentoEnderecos
         )
         PORT MAP
         (
-            entradaA_MUX => saida_imediata(7 DOWNTO 0),
-            entradaB_MUX => saida_adder,
-            seletor_MUX => saida_OR,
-            saida_MUX => saida_MUXJMP
+            CLK => clk,
+            ENABLE => '1',
+            RST => reset,
+            DIN => saida_MUXJMP,
+            DOUT => saida_PC
+        );
+
+    ROM : ENTITY work.memoria
+        GENERIC MAP(
+            dataWidth => larguraBarramentoImediato,
+            addrWidth => larguraBarramentoEnderecos
+        )
+        PORT MAP(
+            Endereco => saida_PC,
+            Dado => saida_imediata
+        );
+
+    ADDER : ENTITY work.somaConstanteGenerico
+        GENERIC MAP(
+            larguraDados => larguraBarramentoEnderecos,
+            incremento => 1
+        )
+        PORT MAP
+        (
+            entrada => saida_PC,
+            saida => saida_adder
+        );
+
+    UC : ENTITY work.UCGenerico
+        PORT MAP(
+            clk => clk,
+            barramentoEntrada => saida_imediata,
+            OPCODE => seletorULA,
+            MUXJUMPHAB => hab_OR,
+            MUXHAB => seletor_MUX,
+            HABANDCOMPARE => hab_AND,
+            HABACU => hab_ACU,
+            readEnable => readEnable,
+            writeEnable => writeEnable
+        );
+
+    ULA : ENTITY work.ULAGenerico
+        GENERIC MAP(
+            larguraDados => larguraBarramentoDados
+        )
+        PORT MAP(
+            ENTRADA_A => saida_imediata(3 DOWNTO 0),
+            ENTRADA_B => saida_ACU,
+            SAIDA => saida_ULA,
+            INSTRUCAO => seletorULA,
+            CLK => clk
         );
 
     MUX : ENTITY work.muxGenerico2
@@ -69,38 +115,13 @@ BEGIN
             DOUT => saida_ACU
         );
 
-    PC : ENTITY work.registradorGenerico
-        GENERIC MAP(
-            larguraDados => larguraBarramentoEnderecos
-        )
-        PORT MAP
-        (
-            CLK => clk,
-            ENABLE => '1',
-            RST => reset,
-            DIN => saida_MUXJMP,
-            DOUT => saida_PC
-        );
 
-    ADDER : ENTITY work.somaConstanteGenerico
-        GENERIC MAP(
-            larguraDados => larguraBarramentoEnderecos,
-            incremento => 1
-        )
-        PORT MAP
-        (
-            entrada => saida_PC,
-            saida => saida_adder
-        );
-
-    ROM : ENTITY work.memoria
-        GENERIC MAP(
-            dataWidth => larguraBarramentoImediato,
-            addrWidth => larguraBarramentoEnderecos
-        )
+    AND1 : ENTITY work.ANDGenerico
         PORT MAP(
-            Endereco => saida_PC,
-            Dado => saida_imediata
+            ENTRADA_A => saida_ACU,
+            ENTRADA_B => hab_AND,
+            SAIDA => saida_AND,
+            CLK => clk
         );
 
     OR1 : ENTITY work.ORGenerico
@@ -110,37 +131,16 @@ BEGIN
             SAIDA => saida_OR
         );
 
-    AND1 : ENTITY work.ANDGenerico
-        PORT MAP(
-            ENTRADA_A => saida_ULA,
-            ENTRADA_B => hab_AND,
-            SAIDA => saida_AND,
-				CLK => clk
-        );
-
-    ULA : ENTITY work.ULAGenerico
+    MUXJMP : ENTITY work.muxGenerico2
         GENERIC MAP(
-            larguraDados => 4
+            larguraDados => larguraBarramentoEnderecos
         )
-        PORT MAP(
-            ENTRADA_A => saida_imediata(3 DOWNTO 0),
-            ENTRADA_B => saida_ACU,
-            SAIDA => saida_ULA,
-            INSTRUCAO => seletorULA,
-            CLK => clk
-        );
-
-    UC : ENTITY work.UCGenerico
-        PORT MAP(
-            clk => clk,
-            barramentoEntrada => saida_imediata,
-            OPCODE => seletorULA,
-            MUXJUMPHAB => hab_OR,
-            MUXHAB => seletor_MUX,
-            HABANDCOMPARE => hab_AND,
-            HABACU => hab_ACU,
-            readEnable => readEnable,
-            writeEnable => writeEnable
+        PORT MAP
+        (
+            entradaB_MUX => saida_imediata(7 DOWNTO 0),
+            entradaA_MUX => saida_adder,
+            seletor_MUX => saida_OR,
+            saida_MUX => saida_MUXJMP
         );
 
     barramentoDadosSaida <= saida_ACU;

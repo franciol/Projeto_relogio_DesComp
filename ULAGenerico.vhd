@@ -16,22 +16,26 @@ ENTITY ULAGenerico IS
 END ENTITY;
 
 ARCHITECTURE comportamento OF ULAGenerico IS
-    SIGNAL us_A, us_B, us_saida : unsigned(larguraDados-1 DOWNTO 0);
 BEGIN
-    PROCESS (ALL)
+    PROCESS (CLK)
     BEGIN
-        us_A <= unsigned(ENTRADA_A);
-        us_B <= unsigned(ENTRADA_B);
         IF (rising_edge(CLK)) THEN
+            -- SOMA
             IF (INSTRUCAO = "00") THEN
-                us_saida <= us_A + us_B;
-            ELSIF (INSTRUCAO = "01") THEN
-                us_saida <= us_A - us_B;
-				ELSIF (INSTRUCAO = "10") THEN
-                us_saida <= us_A;
-            END IF;
-            SAIDA <= std_logic_vector(us_saida);
-        END IF;
+                SAIDA <= std_logic_vector(unsigned(ENTRADA_A) + unsigned(ENTRADA_B));
 
+            --SUBTRAI
+            ELSIF (INSTRUCAO = "01") THEN
+                SAIDA <= std_logic_vector(signed(ENTRADA_B) - signed(ENTRADA_A));
+
+            -- PASSA A
+            ELSIF (INSTRUCAO = "10") THEN
+                SAIDA <= ENTRADA_A;
+
+            -- PASSA B
+            ELSE
+                SAIDA <= ENTRADA_B;
+            END IF;
+        END IF;
     END PROCESS;
 END ARCHITECTURE;

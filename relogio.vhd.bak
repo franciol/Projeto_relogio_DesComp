@@ -1,0 +1,26 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE ieee.numeric_std.ALL;
+
+ENTITY relogio IS
+    PORT (
+        RESET : IN std_logic;
+        CLK : IN std_logic
+
+    );
+
+END ENTITY;
+ARCHITECTURE comportamento OF relogio IS
+BEGIN
+    PROCESS (CLK)
+        BEGIN
+		  IF (rising_edge(CLK)) THEN
+        
+            IF (unsigned(ENTRADA_A) /= "0" AND ENTRADA_B = '1') THEN
+                SAIDA <= '1';
+            ELSE
+                SAIDA <= '0';
+            END IF;
+        END IF;
+    END PROCESS;
+END ARCHITECTURE;

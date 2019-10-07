@@ -1,0 +1,23 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+
+ENTITY IO IS
+    GENERIC (
+        quantidadeBotao : NATURAL := 1
+    );
+
+    PORT (
+        habilita : IN STD_LOGIC;
+        saidaBotoes : OUT STD_LOGIC_VECTOR(quantidadeBotao - 1 DOWNTO 0)
+    );
+END ENTITY;
+
+ARCHITECTURE FILSDELA OF IO IS
+BEGIN
+    IF (unsigned(habilita) = 1) THEN
+        saidaBotoes <= "1";
+    ELSE
+        saidaBotoes <= "0";
+    END IF;
+END ARCHITECTURE;

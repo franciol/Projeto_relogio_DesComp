@@ -18,14 +18,12 @@ END ENTITY;
 ARCHITECTURE comportamento OF ANDGenerico IS
 BEGIN
     PROCESS (CLK)
-        BEGIN
-		  IF (rising_edge(CLK)) THEN
-        
-            IF (unsigned(ENTRADA_A) /= "0" AND ENTRADA_B = '1') THEN
-                SAIDA <= '1';
-            ELSE
-                SAIDA <= '0';
-            END IF;
+    BEGIN
+
+        IF (unsigned(ENTRADA_A) >= "1010" AND ENTRADA_B = '1') THEN
+            SAIDA <= '1';
+        ELSE
+            SAIDA <= '0';
         END IF;
     END PROCESS;
 END ARCHITECTURE;
