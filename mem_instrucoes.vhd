@@ -2,6 +2,9 @@ LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
+-- Projeito feito por    Francisco Aveiro
+--                       Giulia Passarelli
+--                       Alexandre Edington
 ENTITY memoria IS
     GENERIC (
         dataWidth : NATURAL := 16;
@@ -22,26 +25,19 @@ ARCHITECTURE assincrona OF memoria IS
     BEGIN
         -- Inicializa os endereços e escreve ASSEMBLY!!!! :
         -- Salvando 8 no ACUMULADOR
-        tmp(0) := "1000000000000000";   -- SETA A ULA!!!!
-        tmp(1) := "1001010000001001";   -- SALVA 9 
-        
-        tmp(2) := "0000000000000000";   -- SETA ULA
-        tmp(3) := "0001010000000001";   -- SOMA 1
+        tmp(0) := x"8000";   -- SETA A ULA!!!!
+        tmp(1) := x"9409";   -- SALVA 9 
 
-        tmp(4) := "0000000000000000";
+        tmp(3) := x"0200";
+        tmp(4) := x"0201";
+        tmp(5) := x"0202";
+        tmp(6) := x"0203";
+        tmp(7) := x"0204";
+        tmp(8) := x"0205";
+        
 
-        tmp(5) := "0000100000000000";    -- JUMP COMPARE
-        tmp(6) := "0000000000001000";
-        tmp(7) := "1001010000000110";    -- SALVA 6
-        tmp(8) := "1000000000000000";    -- SALVA 6
         
-        tmp(9) := "1001010000000111";    -- SALVA 7 
         
-        tmp(10) := "0010000000000000";    -- SALVA 7 
-        tmp(11) := "0000000000000000";    -- SALVA 7 
-        
-       
-
 
         RETURN tmp;
     END initMemory;
