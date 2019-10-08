@@ -9,8 +9,9 @@ ENTITY relogio IS
         larguraBarramentoDados : NATURAL := 4
     );
     PORT (
-        CLOCK_50, SW0 ,KEY3: IN std_logic;
+        CLOCK_50, KEY3: IN std_logic;
         HEX2, HEX3, HEX4, HEX5, HEX6, HEX7 : OUT std_logic_vector(6 DOWNTO 0);
+        SW : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
         DATA : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
         CLK_OUT, HAB7SEG_OUT, HABRAM_OUT, HAB_IO_OUT : OUT STD_LOGIC;
         ENDR : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
@@ -26,7 +27,7 @@ BEGIN
 
     IO : ENTITY work.IO
         PORT MAP(
-            habilita => SW0,
+            habilita => SW(0),
             saidaBotoes => sel_base_tempo,
             RESET_IN => KEY3,
             RESET_OUT => ress
