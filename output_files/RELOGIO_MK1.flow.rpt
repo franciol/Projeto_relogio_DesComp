@@ -1,5 +1,5 @@
 Flow report for RELOGIO_MK1
-Tue Oct  8 09:33:33 2019
+Tue Oct  8 11:38:29 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Oct  8 09:33:33 2019       ;
+; Flow Status                        ; Successful - Tue Oct  8 11:38:29 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; RELOGIO_MK1                                 ;
 ; Top-level Entity Name              ; relogio                                     ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 120                                         ;
-;     Total combinational functions  ; 92                                          ;
-;     Dedicated logic registers      ; 56                                          ;
-; Total registers                    ; 56                                          ;
-; Total pins                         ; 74                                          ;
+; Total logic elements               ; 64                                          ;
+;     Total combinational functions  ; 52                                          ;
+;     Dedicated logic registers      ; 40                                          ;
+; Total registers                    ; 40                                          ;
+; Total pins                         ; 61                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/08/2019 09:33:18 ;
+; Start date & time ; 10/08/2019 11:38:19 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; RELOGIO_MK1         ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 255543641954553.157053799809909        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 255543641954553.157054549920191        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -99,10 +99,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 997 MB              ; 00:00:29                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 1032 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 1036 MB             ; 00:00:00                           ;
-; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:29                           ;
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 946 MB              ; 00:00:25                           ;
+; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:25                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -112,8 +110,6 @@ refer to the applicable agreement for further details.
 ; Module Name          ; Machine Hostname        ; OS Name      ; OS Version ; Processor type ;
 +----------------------+-------------------------+--------------+------------+----------------+
 ; Analysis & Synthesis ; francisco-ThinkPad-T480 ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; EDA Netlist Writer   ; francisco-ThinkPad-T480 ; Ubuntu 19.04 ; 19         ; x86_64         ;
-; EDA Netlist Writer   ; francisco-ThinkPad-T480 ; Ubuntu 19.04 ; 19         ; x86_64         ;
 +----------------------+-------------------------+--------------+------------+----------------+
 
 
@@ -121,8 +117,6 @@ refer to the applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off RELOGIO_MK1 -c RELOGIO_MK1
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off RELOGIO_MK1 -c RELOGIO_MK1 --vector_source=/home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/Waveform10.vwf --testbench_file=/home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/simulation/qsim/Waveform10.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/simulation/qsim/ RELOGIO_MK1 -c RELOGIO_MK1
 
 
 

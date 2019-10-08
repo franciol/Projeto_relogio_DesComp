@@ -8,8 +8,8 @@ ENTITY IO IS
     );
 
     PORT (
-        habilita : IN STD_LOGIC;
-        saidaBotoes : OUT STD_LOGIC
+        habilita, RESET_IN : IN STD_LOGIC;
+        saidaBotoes, RESET_OUT : OUT STD_LOGIC
     );
 END ENTITY;
 
@@ -22,5 +22,12 @@ BEGIN
         ELSE
             saidaBotoes <= '1';
         END IF;
+
+        IF (RESET_IN <= '1') THEN
+            RESET_OUT <= '0';
+        ELSE
+            RESET_OUT <= '1';
+        END IF;
+        
     END PROCESS;
 END ARCHITECTURE;

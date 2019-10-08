@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "10/08/2019 09:33:32"
+-- Generated on "10/08/2019 11:15:23"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          relogio
 -- 
@@ -48,6 +48,7 @@ SIGNAL HEX4 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL HEX5 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL HEX6 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL HEX7 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL KEY3 : STD_LOGIC;
 SIGNAL SW0 : STD_LOGIC;
 COMPONENT relogio
 	PORT (
@@ -66,6 +67,7 @@ COMPONENT relogio
 	HEX5 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	HEX6 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	HEX7 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	KEY3 : IN STD_LOGIC;
 	SW0 : IN STD_LOGIC
 	);
 END COMPONENT;
@@ -88,6 +90,7 @@ BEGIN
 	HEX5 => HEX5,
 	HEX6 => HEX6,
 	HEX7 => HEX7,
+	KEY3 => KEY3,
 	SW0 => SW0
 	);
 
@@ -106,13 +109,27 @@ END PROCESS t_prcs_CLOCK_50;
 -- SW0
 t_prcs_SW0: PROCESS
 BEGIN
-	SW0 <= '1';
-	WAIT FOR 250000 ps;
+LOOP
 	SW0 <= '0';
-	WAIT FOR 250000 ps;
+	WAIT FOR 25000 ps;
 	SW0 <= '1';
-	WAIT FOR 250000 ps;
-	SW0 <= '0';
-WAIT;
+	WAIT FOR 25000 ps;
+	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+END LOOP;
 END PROCESS t_prcs_SW0;
+
+-- KEY3
+t_prcs_KEY3: PROCESS
+BEGIN
+	KEY3 <= '1';
+	WAIT FOR 200000 ps;
+	KEY3 <= '0';
+	WAIT FOR 200000 ps;
+	KEY3 <= '1';
+	WAIT FOR 200000 ps;
+	KEY3 <= '0';
+	WAIT FOR 200000 ps;
+	KEY3 <= '1';
+WAIT;
+END PROCESS t_prcs_KEY3;
 END relogio_arch;

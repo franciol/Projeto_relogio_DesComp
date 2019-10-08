@@ -63,7 +63,6 @@ set_global_assignment -name VHDL_FILE seg7.vhd
 set_global_assignment -name VHDL_FILE relogio.vhd
 set_global_assignment -name VHDL_FILE registradorLogico.vhd
 set_global_assignment -name VHDL_FILE registrador.vhd
-set_global_assignment -name VHDL_FILE RAM.vhd
 set_global_assignment -name VHDL_FILE ORGenerico.vhd
 set_global_assignment -name VHDL_FILE muxGenerico2.vhd
 set_global_assignment -name VHDL_FILE mem_instrucoes.vhd

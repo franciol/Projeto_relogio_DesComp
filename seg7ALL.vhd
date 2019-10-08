@@ -9,18 +9,19 @@ ENTITY seg7ALL IS
         apaga : IN std_logic := '0';
         negativo : IN std_logic := '0';
         overFlow : IN std_logic := '0';
-        CLK, RESET, ENABLE : IN std_logic;
+        CLK, RESET, ENABLE, READ_DATA : IN std_logic;
+        endereco7SEG : IN std_logic_vector(7 DOWNTO 0);
 
         -- Output ports
         saida7seg_US, saida7seg_DS, saida7seg_UM, saida7seg_DM, saida7seg_UH, saida7seg_DH : OUT std_logic_vector(6 DOWNTO 0); -- := (others => '1')
-        endereco7SEG : IN std_logic_vector(7 DOWNTO 0)
+        leituraDado : OUT std_logic_vector(3 DOWNTO 0)
     );
 END ENTITY;
 ARCHITECTURE FSMH OF seg7ALL IS
-    SIGNAL hab_US, hab_DS, hab_UM, hab_DM, hab_UH, hab_DH : STD_LOGIC;
+    SIGNAL hab_US, hab_DS, hab_UM, hab_DM, hab_UH, hab_DH, ler_US, ler_DS, ler_UM, ler_DM, ler_UH, ler_DH : STD_LOGIC;
     SIGNAL dado_US, dado_DS, dado_UM, dado_DM, dado_UH, dado_DH : STD_LOGIC_VECTOR(3 DOWNTO 0);
 BEGIN
-
+    
     REGSEG7_US : ENTITY work.registradorGenerico
         GENERIC MAP(
             larguraDados => 4
@@ -146,46 +147,47 @@ BEGIN
             overflow => '0',
             saida7seg => saida7seg_DH
         );
-
-    PROCESS (ALL)
+		  
+		  PROCESS (ALL)
     BEGIN
         IF (ENABLE = '1') THEN
-            IF (endereco7SEG = "00000000") THEN
+		  leituraDado <= "1111";
+            IF (endereco7SEG = "00001000") THEN
                 hab_US <= '1';
                 hab_DS <= '0';
                 hab_UM <= '0';
                 hab_DM <= '0';
                 hab_UH <= '0';
                 hab_DH <= '0';
-            ELSIF (endereco7SEG = "00000001") THEN
+            ELSIF (endereco7SEG = "00001001") THEN
                 hab_US <= '0';
                 hab_DS <= '1';
                 hab_UM <= '0';
                 hab_DM <= '0';
                 hab_UH <= '0';
                 hab_DH <= '0';
-            ELSIF (endereco7SEG = "00000010") THEN
+            ELSIF (endereco7SEG = "00001010") THEN
                 hab_US <= '0';
                 hab_DS <= '0';
                 hab_UM <= '1';
                 hab_DM <= '0';
                 hab_UH <= '0';
                 hab_DH <= '0';
-            ELSIF (endereco7SEG = "00000011") THEN
+            ELSIF (endereco7SEG = "00001011") THEN
                 hab_US <= '0';
                 hab_DS <= '0';
                 hab_UM <= '0';
                 hab_DM <= '1';
                 hab_UH <= '0';
                 hab_DH <= '0';
-            ELSIF (endereco7SEG = "00000100") THEN
+            ELSIF (endereco7SEG = "00001100") THEN
                 hab_US <= '0';
                 hab_DS <= '0';
                 hab_UM <= '0';
                 hab_DM <= '0';
                 hab_UH <= '1';
                 hab_DH <= '0';
-            ELSIF (endereco7SEG = "00000101") THEN
+            ELSIF (endereco7SEG = "00001101") THEN
                 hab_US <= '0';
                 hab_DS <= '0';
                 hab_UM <= '0';
@@ -200,6 +202,29 @@ BEGIN
                 hab_UH <= '0';
                 hab_DH <= '0';
             END IF;
+        ELSIF (READ_DATA) THEN
+            hab_US <= '0';
+            hab_DS <= '0';
+            hab_UM <= '0';
+            hab_DM <= '0';
+            hab_UH <= '0';
+            hab_DH <= '0';
+            IF (endereco7SEG = "00001000") THEN
+                leituraDado <= dado_US;
+            ELSIF (endereco7SEG = "00001001") THEN
+                leituraDado <= dado_DS;
+            ELSIF (endereco7SEG = "00001010") THEN
+                leituraDado <= dado_UM;
+            ELSIF (endereco7SEG = "00001011") THEN
+                leituraDado <= dado_DM;
+            ELSIF (endereco7SEG = "00001100") THEN
+                leituraDado <= dado_UH;
+            ELSIF (endereco7SEG = "00001101") THEN
+                leituraDado <= dado_DH;
+            ELSE
+                leituraDado <= "1111";
+            END IF;
+
         ELSE
             hab_US <= '0';
             hab_DS <= '0';
@@ -207,6 +232,8 @@ BEGIN
             hab_DM <= '0';
             hab_UH <= '0';
             hab_DH <= '0';
+				leituraDado <= "1111";
         END IF;
+
     END PROCESS;
 END ARCHITECTURE;

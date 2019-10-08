@@ -10,8 +10,7 @@ ENTITY decodificador IS
         clk : IN std_logic;
         mem : IN std_logic_vector(7 DOWNTO 0);
         -- Output ports
-        HabRam : OUT std_logic;
-        Hab7seg : OUT std_logic;
+        Hab7seg_read, Hab7seg_write : OUT std_logic;
         HabIO : OUT std_logic
     );
 END ENTITY;
@@ -20,52 +19,23 @@ ARCHITECTURE comportamento OF decodificador IS
 BEGIN
     PROCESS (ALL)
     BEGIN
-        IF (unsigned(mem) < 48) THEN
+        IF (unsigned(mem) < 16) THEN
             IF (wr = '1') THEN
-                Hab7seg <= '1';
-                HabRam <= '0';
+                Hab7seg_read <= '0';
+                Hab7seg_write <= '1';
                 HabIO <= '0';
             ELSIF (rd = '1') THEN
-                Hab7seg <= '0';
-                HabRam <= '0';
+                Hab7seg_read <= '1';
+                Hab7seg_write <= '0';
                 HabIO <= '0';
             ELSE
-                Hab7seg <= '0';
-                HabRam <= '0';
+                Hab7seg_read <= '0';
+                Hab7seg_write <= '0';
                 HabIO <= '0';
             END IF;
-        ELSIF (unsigned(mem) < 64) THEN
-            IF (wr = '1') THEN
-                Hab7seg <= '0';
-                HabRam <= '1';
-                HabIO <= '0';
-            ELSIF (rd = '1') THEN
-                Hab7seg <= '0';
-                HabRam <= '1';
-                HabIO <= '0';
-            ELSE
-                Hab7seg <= '0';
-                HabRam <= '0';
-                HabIO <= '0';
-            END IF;
-        ELSIF (unsigned(mem) < 80) THEN
-            IF (wr = '1') THEN
-                Hab7seg <= '0';
-                HabRam <= '0';
-                HabIO <= '0';
-            ELSIF (rd = '1') THEN
-                Hab7seg <= '0';
-                HabRam <= '0';
-                HabIO <= '1';
-            ELSE
-                Hab7seg <= '0';
-                HabRam <= '0';
-                HabIO <= '0';
-            END IF;
-
         ELSE
-            Hab7seg <= '0';
-            HabRam <= '0';
+            Hab7seg_read <= '0';
+            Hab7seg_write <= '0';
             HabIO <= '0';
 
         END IF;

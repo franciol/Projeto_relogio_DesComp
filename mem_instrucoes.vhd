@@ -25,19 +25,25 @@ ARCHITECTURE assincrona OF memoria IS
     BEGIN
         -- Inicializa os endereços e escreve ASSEMBLY!!!! :
         -- Salvando 8 no ACUMULADOR
-        tmp(0) := x"8000";   -- SETA A ULA!!!!
-        tmp(1) := x"9409";   -- SALVA 9 
+        tmp(0) := x"8000"; -- SETA A ULA!!!!
+        tmp(1) := x"9401"; -- SALVA 1
 
-        tmp(3) := x"0200";
-        tmp(4) := x"0201";
-        tmp(5) := x"0202";
-        tmp(6) := x"0203";
-        tmp(7) := x"0204";
-        tmp(8) := x"0205";
-        
+        tmp(2) := x"0000";
+        tmp(3) := x"1401";
 
-        
-        
+        tmp(4) := x"0208";
+        tmp(5) := x"0208";
+
+        tmp(6) := x"0000";
+        tmp(7) := x"1401";
+
+
+        tmp(8) := x"0000";
+        tmp(9) := x"1401";
+
+        tmp(10) := x"0208";
+        tmp(11) := x"0208";
+    
 
         RETURN tmp;
     END initMemory;

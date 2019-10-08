@@ -17,10 +17,10 @@ ENTITY ANDGenerico IS
 END ENTITY;
 ARCHITECTURE comportamento OF ANDGenerico IS
 BEGIN
-    PROCESS (CLK)
+    PROCESS (ALL)
     BEGIN
 
-        IF (unsigned(ENTRADA_A) >= "1010" AND ENTRADA_B = '1') THEN
+        IF (unsigned(ENTRADA_A) >= "1001" AND ENTRADA_B = '1') THEN
             SAIDA <= '1';
         ELSE
             SAIDA <= '0';
