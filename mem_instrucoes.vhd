@@ -57,10 +57,6 @@ ARCHITECTURE assincrona OF memoria IS
                 tmp(18) := x"0216";
 
                 tmp(19) := x"0502";
-
-as
-a
-                aaaaa
                 tmp(20) := x"0215";
                 
                 tmp(21) := x"0503";
