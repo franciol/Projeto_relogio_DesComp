@@ -8,36 +8,39 @@ ENTITY decodificador IS
         rd : IN std_logic := '0';
         wr : IN std_logic := '0';
         clk : IN std_logic;
+        AMPM_HAB : IN std_logic;
         mem : IN std_logic_vector(7 DOWNTO 0);
+        ENTRADA_DE_DADOS_SEG, ENTRADA_DADOS_TIMER : IN std_logic_vector(3 DOWNTO 0);
         -- Output ports
-        Hab7seg_read, Hab7seg_write : OUT std_logic;
-        HabIO : OUT std_logic
+        HabRAM_read, HabRAM_write, Hab7seg_write, Habtimer_write : OUT std_logic;
+        SAIDA_DE_DADOS : OUT std_logic_vector(3 DOWNTO 0)
+
     );
 END ENTITY;
 
 ARCHITECTURE comportamento OF decodificador IS
 BEGIN
-    PROCESS (ALL)
-    BEGIN
-        IF (unsigned(mem) < 16) THEN
-            IF (wr = '1') THEN
-                Hab7seg_read <= '0';
-                Hab7seg_write <= '1';
-                HabIO <= '0';
-            ELSIF (rd = '1') THEN
-                Hab7seg_read <= '1';
-                Hab7seg_write <= '0';
-                HabIO <= '0';
-            ELSE
-                Hab7seg_read <= '0';
-                Hab7seg_write <= '0';
-                HabIO <= '0';
-            END IF;
-        ELSE
-            Hab7seg_read <= '0';
-            Hab7seg_write <= '0';
-            HabIO <= '0';
 
-        END IF;
-    END PROCESS;
+    HabRAM_read <=
+        '1' WHEN (rd = '1' AND unsigned(mem) < 16 AND wr = '0') ELSE -- HABILITA LER RAM
+        '0';
+
+    HabRAM_write <=
+        '1' WHEN (wr = '1' AND unsigned(mem) < 16 AND rd = '0') ELSE -- HABILITA ESCREVER RAM
+        '0';
+
+    SAIDA_DE_DADOS <=
+        ENTRADA_DE_DADOS_SEG WHEN (rd = '1' AND unsigned(mem) < 16 AND wr = '0') ELSE
+        ENTRADA_DADOS_TIMER WHEN (rd = '1' AND unsigned(mem) = 16 AND wr = '0') ELSE
+        "1100" WHEN (rd = '1' AND unsigned(mem) = 25 AND wr = '0' AND AMPM_HAB = '1') ELSE
+        "0000" WHEN (rd = '1' AND unsigned(mem) = 25 AND wr = '0' AND AMPM_HAB = '0') ELSE
+        "0000";
+
+    Habtimer_write <=
+        '1' WHEN (wr = '1' AND unsigned(mem) = 16 AND rd = '0') ELSE -- HABILITA ZERAR TIMER
+        '0';
+
+    Hab7seg_write <=
+        '1' WHEN (wr = '1' AND unsigned(mem) > 16 AND unsigned(mem) <= 32 AND rd = '0') ELSE -- HABILITA LER TIMER
+        '0';
 END ARCHITECTURE;

@@ -20,14 +20,20 @@ ARCHITECTURE comportamento OF muxGenerico2 IS
 BEGIN
     -- Para sintetizar lógica combinacional usando um processo,
     --  todas as entradas do modulo devem aparecer na lista de sensibilidade.
-    PROCESS (entradaA_MUX, entradaB_MUX, seletor_MUX) IS
-    BEGIN
-        -- If é uma instrução sequencial que não pode ser usada
-        --  na seção de instruções concorrentes da arquitetura.
-        IF (seletor_MUX = '0') THEN
-            saida_MUX <= entradaA_MUX;
-        ELSE
-            saida_MUX <= entradaB_MUX;
-        END IF;
-    END PROCESS;
+--    PROCESS (entradaA_MUX, entradaB_MUX, seletor_MUX) IS
+--    BEGIN
+--        -- If é uma instrução sequencial que não pode ser usada
+--        --  na seção de instruções concorrentes da arquitetura.
+--        IF (seletor_MUX = '0') THEN
+--            saida_MUX <= entradaA_MUX;
+--        ELSE
+--            saida_MUX <= entradaB_MUX;
+--        END IF;
+--    END PROCESS;
+	 
+	saida_MUX <= 
+	entradaA_MUX when (seletor_MUX = '0') else
+	entradaB_MUX;
+
 END ARCHITECTURE;
+

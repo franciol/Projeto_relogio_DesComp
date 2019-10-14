@@ -43,7 +43,7 @@ BEGIN
         "0000011" WHEN dadoHex = "1011" ELSE ---B
         "1000110" WHEN dadoHex = "1100" ELSE ---C
         "0100001" WHEN dadoHex = "1101" ELSE ---D
-        "0000110" WHEN dadoHex = "1110" ELSE ---E
+        "0001100" WHEN dadoHex = "1110" ELSE ---E
         "1111111"; -- Apaga todos segmentos.
 
     saida7seg <= "1100010" WHEN (overFlow = '1') ELSE

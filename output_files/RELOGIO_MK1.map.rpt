@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RELOGIO_MK1
-Tue Oct  8 11:38:29 2019
+Mon Oct 14 18:15:23 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -15,38 +15,48 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
   9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |relogio
- 11. Parameter Settings for User Entity Instance: IO:IO
- 12. Parameter Settings for User Entity Instance: divisorGenerico:BASE_DE_TEMPO_1
- 13. Parameter Settings for User Entity Instance: divisorGenerico:BASE_DE_TEMPO_2
- 14. Parameter Settings for User Entity Instance: muxLogico:MUX_BASE_TEMPO
- 15. Parameter Settings for User Entity Instance: cpu:CPU
- 16. Parameter Settings for User Entity Instance: cpu:CPU|registradorGenerico:PC
- 17. Parameter Settings for User Entity Instance: cpu:CPU|memoria:ROM
- 18. Parameter Settings for User Entity Instance: cpu:CPU|somaConstanteGenerico:ADDER
- 19. Parameter Settings for User Entity Instance: cpu:CPU|UCGenerico:UC
- 20. Parameter Settings for User Entity Instance: cpu:CPU|ULAGenerico:ULA
- 21. Parameter Settings for User Entity Instance: cpu:CPU|muxGenerico2:MUX
- 22. Parameter Settings for User Entity Instance: cpu:CPU|registradorGenerico:ACU
- 23. Parameter Settings for User Entity Instance: cpu:CPU|ANDGenerico:AND1
- 24. Parameter Settings for User Entity Instance: cpu:CPU|muxGenerico2:MUXJMP
- 25. Parameter Settings for User Entity Instance: seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_US
- 26. Parameter Settings for User Entity Instance: seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_DS
- 27. Parameter Settings for User Entity Instance: seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_UM
- 28. Parameter Settings for User Entity Instance: seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_DM
- 29. Parameter Settings for User Entity Instance: seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_UH
- 30. Parameter Settings for User Entity Instance: seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_DH
- 31. Port Connectivity Checks: "seg7ALL:SEG7ALL|seg7:SEG7_DH"
- 32. Port Connectivity Checks: "seg7ALL:SEG7ALL|seg7:SEG7_UH"
- 33. Port Connectivity Checks: "seg7ALL:SEG7ALL|seg7:SEG7_DM"
- 34. Port Connectivity Checks: "seg7ALL:SEG7ALL|seg7:SEG7_UM"
- 35. Port Connectivity Checks: "seg7ALL:SEG7ALL|seg7:SEG7_DS"
- 36. Port Connectivity Checks: "seg7ALL:SEG7ALL|seg7:SEG7_US"
- 37. Port Connectivity Checks: "seg7ALL:SEG7ALL"
- 38. Port Connectivity Checks: "cpu:CPU|registradorGenerico:PC"
- 39. Post-Synthesis Netlist Statistics for Top Partition
- 40. Elapsed Time Per Partition
- 41. Analysis & Synthesis Messages
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |relogio
+ 12. Parameter Settings for User Entity Instance: IO:IO
+ 13. Parameter Settings for User Entity Instance: divisorGenerico:BASE_DE_TEMPO_1
+ 14. Parameter Settings for User Entity Instance: divisorGenerico:BASE_DE_TEMPO_2
+ 15. Parameter Settings for User Entity Instance: divisorGenerico:BASE_DE_TEMPO_3
+ 16. Parameter Settings for User Entity Instance: muxLogico:MUX_BASE_TEMPO_TESTE
+ 17. Parameter Settings for User Entity Instance: muxLogico:MUX_BASE_TEMPO
+ 18. Parameter Settings for User Entity Instance: cpu:CPU
+ 19. Parameter Settings for User Entity Instance: cpu:CPU|registradorGenerico:PC
+ 20. Parameter Settings for User Entity Instance: cpu:CPU|memoria:ROM
+ 21. Parameter Settings for User Entity Instance: cpu:CPU|somaConstanteGenerico:ADDER
+ 22. Parameter Settings for User Entity Instance: cpu:CPU|UCGenerico:UC
+ 23. Parameter Settings for User Entity Instance: cpu:CPU|ULAGenerico:ULA
+ 24. Parameter Settings for User Entity Instance: cpu:CPU|muxGenerico2:MUX
+ 25. Parameter Settings for User Entity Instance: cpu:CPU|registradorGenerico:ACU
+ 26. Parameter Settings for User Entity Instance: cpu:CPU|ANDGenerico:AND1
+ 27. Parameter Settings for User Entity Instance: cpu:CPU|muxGenerico2:MUXJMP
+ 28. Parameter Settings for User Entity Instance: registradorGenerico:TIMER
+ 29. Parameter Settings for User Entity Instance: seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_US
+ 30. Parameter Settings for User Entity Instance: seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_DS
+ 31. Parameter Settings for User Entity Instance: seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_UM
+ 32. Parameter Settings for User Entity Instance: seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_DM
+ 33. Parameter Settings for User Entity Instance: seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_UH
+ 34. Parameter Settings for User Entity Instance: seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_DH
+ 35. Parameter Settings for User Entity Instance: seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_AMPM
+ 36. Parameter Settings for User Entity Instance: ram20:RAM_USAVEL
+ 37. Port Connectivity Checks: "seg7ALL:SEG7ALL|seg7:SEG7_AMPM"
+ 38. Port Connectivity Checks: "seg7ALL:SEG7ALL|seg7:SEG7_NADA"
+ 39. Port Connectivity Checks: "seg7ALL:SEG7ALL|seg7:SEG7_DH"
+ 40. Port Connectivity Checks: "seg7ALL:SEG7ALL|seg7:SEG7_UH"
+ 41. Port Connectivity Checks: "seg7ALL:SEG7ALL|seg7:SEG7_DM"
+ 42. Port Connectivity Checks: "seg7ALL:SEG7ALL|seg7:SEG7_UM"
+ 43. Port Connectivity Checks: "seg7ALL:SEG7ALL|seg7:SEG7_DS"
+ 44. Port Connectivity Checks: "seg7ALL:SEG7ALL|seg7:SEG7_US"
+ 45. Port Connectivity Checks: "seg7ALL:SEG7ALL"
+ 46. Port Connectivity Checks: "decodificador:DECODER"
+ 47. Port Connectivity Checks: "registradorGenerico:TIMER"
+ 48. Port Connectivity Checks: "cpu:CPU|registradorGenerico:PC"
+ 49. Post-Synthesis Netlist Statistics for Top Partition
+ 50. Elapsed Time Per Partition
+ 51. Analysis & Synthesis Messages
 
 
 
@@ -72,16 +82,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct  8 11:38:29 2019       ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct 14 18:15:23 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; RELOGIO_MK1                                 ;
 ; Top-level Entity Name              ; relogio                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 64                                          ;
-;     Total combinational functions  ; 52                                          ;
-;     Dedicated logic registers      ; 40                                          ;
-; Total registers                    ; 40                                          ;
-; Total pins                         ; 61                                          ;
+; Total logic elements               ; 2,422                                       ;
+;     Total combinational functions  ; 1,369                                       ;
+;     Dedicated logic registers      ; 1,126                                       ;
+; Total registers                    ; 1126                                        ;
+; Total pins                         ; 90                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -97,6 +107,7 @@ refer to the applicable agreement for further details.
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
 ; Top-level entity name                                            ; relogio            ; RELOGIO_MK1        ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation              ; 4                  ;                    ;
 ; VHDL Show LMF Mapping Messages                                   ; Off                ;                    ;
 ; VHDL Version                                                     ; VHDL_2008          ; VHDL_1993          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
@@ -189,107 +200,116 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                     ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                              ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------+---------+
-; ULAGenerico.vhd                  ; yes             ; User VHDL File  ; /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/ULAGenerico.vhd           ;         ;
-; UCGenerico.vhd                   ; yes             ; User VHDL File  ; /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/UCGenerico.vhd            ;         ;
-; somaConstanteGenerico.vhd        ; yes             ; User VHDL File  ; /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/somaConstanteGenerico.vhd ;         ;
-; seg7ALL.vhd                      ; yes             ; User VHDL File  ; /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/seg7ALL.vhd               ;         ;
-; seg7.vhd                         ; yes             ; User VHDL File  ; /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/seg7.vhd                  ;         ;
-; relogio.vhd                      ; yes             ; User VHDL File  ; /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd               ;         ;
-; registrador.vhd                  ; yes             ; User VHDL File  ; /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/registrador.vhd           ;         ;
-; ORGenerico.vhd                   ; yes             ; User VHDL File  ; /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/ORGenerico.vhd            ;         ;
-; muxGenerico2.vhd                 ; yes             ; User VHDL File  ; /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/muxGenerico2.vhd          ;         ;
-; mem_instrucoes.vhd               ; yes             ; User VHDL File  ; /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/mem_instrucoes.vhd        ;         ;
-; IO.vhd                           ; yes             ; User VHDL File  ; /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/IO.vhd                    ;         ;
-; divisorGenerico.vhd              ; yes             ; User VHDL File  ; /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/divisorGenerico.vhd       ;         ;
-; decodificador.vhd                ; yes             ; User VHDL File  ; /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/decodificador.vhd         ;         ;
-; cpu.vhd                          ; yes             ; User VHDL File  ; /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/cpu.vhd                   ;         ;
-; ANDGenerico.vhd                  ; yes             ; User VHDL File  ; /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/ANDGenerico.vhd           ;         ;
-; muxLogico.vhd                    ; yes             ; User VHDL File  ; /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/muxLogico.vhd             ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                          ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
+; ram20.vhd                        ; yes             ; User VHDL File  ; C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/ram20.vhd                 ;         ;
+; ULAGenerico.vhd                  ; yes             ; User VHDL File  ; C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/ULAGenerico.vhd           ;         ;
+; UCGenerico.vhd                   ; yes             ; User VHDL File  ; C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/UCGenerico.vhd            ;         ;
+; somaConstanteGenerico.vhd        ; yes             ; User VHDL File  ; C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/somaConstanteGenerico.vhd ;         ;
+; seg7ALL.vhd                      ; yes             ; User VHDL File  ; C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/seg7ALL.vhd               ;         ;
+; seg7.vhd                         ; yes             ; User VHDL File  ; C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/seg7.vhd                  ;         ;
+; relogio.vhd                      ; yes             ; User VHDL File  ; C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/relogio.vhd               ;         ;
+; registrador.vhd                  ; yes             ; User VHDL File  ; C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/registrador.vhd           ;         ;
+; muxGenerico2.vhd                 ; yes             ; User VHDL File  ; C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/muxGenerico2.vhd          ;         ;
+; mem_instrucoes.vhd               ; yes             ; User VHDL File  ; C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/mem_instrucoes.vhd        ;         ;
+; IO.vhd                           ; yes             ; User VHDL File  ; C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/IO.vhd                    ;         ;
+; divisorGenerico.vhd              ; yes             ; User VHDL File  ; C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/divisorGenerico.vhd       ;         ;
+; decodificador.vhd                ; yes             ; User VHDL File  ; C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/decodificador.vhd         ;         ;
+; cpu.vhd                          ; yes             ; User VHDL File  ; C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/cpu.vhd                   ;         ;
+; ANDGenerico.vhd                  ; yes             ; User VHDL File  ; C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/ANDGenerico.vhd           ;         ;
+; muxLogico.vhd                    ; yes             ; User VHDL File  ; C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/muxLogico.vhd             ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                      ;
-+---------------------------------------------+------------------------------------+
-; Resource                                    ; Usage                              ;
-+---------------------------------------------+------------------------------------+
-; Estimated Total logic elements              ; 64                                 ;
-;                                             ;                                    ;
-; Total combinational functions               ; 52                                 ;
-; Logic element usage by number of LUT inputs ;                                    ;
-;     -- 4 input functions                    ; 21                                 ;
-;     -- 3 input functions                    ; 6                                  ;
-;     -- <=2 input functions                  ; 25                                 ;
-;                                             ;                                    ;
-; Logic elements by mode                      ;                                    ;
-;     -- normal mode                          ; 31                                 ;
-;     -- arithmetic mode                      ; 21                                 ;
-;                                             ;                                    ;
-; Total registers                             ; 40                                 ;
-;     -- Dedicated logic registers            ; 40                                 ;
-;     -- I/O registers                        ; 0                                  ;
-;                                             ;                                    ;
-; I/O pins                                    ; 61                                 ;
-;                                             ;                                    ;
-; Embedded Multiplier 9-bit elements          ; 0                                  ;
-;                                             ;                                    ;
-; Maximum fan-out node                        ; muxLogico:MUX_BASE_TEMPO|saida_MUX ;
-; Maximum fan-out                             ; 28                                 ;
-; Total fan-out                               ; 330                                ;
-; Average fan-out                             ; 1.54                               ;
-+---------------------------------------------+------------------------------------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 2,422          ;
+;                                             ;                ;
+; Total combinational functions               ; 1369           ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 975            ;
+;     -- 3 input functions                    ; 291            ;
+;     -- <=2 input functions                  ; 103            ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 1304           ;
+;     -- arithmetic mode                      ; 65             ;
+;                                             ;                ;
+; Total registers                             ; 1126           ;
+;     -- Dedicated logic registers            ; 1126           ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 90             ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 1125           ;
+; Total fan-out                               ; 8503           ;
+; Average fan-out                             ; 3.18           ;
++---------------------------------------------+----------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                              ;
-+----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                     ; Entity Name         ; Library Name ;
-+----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+---------------------+--------------+
-; |relogio                               ; 52 (1)              ; 40 (0)                    ; 0           ; 0            ; 0       ; 0         ; 61   ; 0            ; |relogio                                                ; relogio             ; work         ;
-;    |cpu:CPU|                           ; 21 (0)              ; 19 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU                                        ; cpu                 ; work         ;
-;       |UCGenerico:UC|                  ; 0 (0)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|UCGenerico:UC                          ; UCGenerico          ; work         ;
-;       |ULAGenerico:ULA|                ; 7 (7)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|ULAGenerico:ULA                        ; ULAGenerico         ; work         ;
-;       |memoria:ROM|                    ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|memoria:ROM                            ; memoria             ; work         ;
-;       |registradorGenerico:ACU|        ; 0 (0)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|registradorGenerico:ACU                ; registradorGenerico ; work         ;
-;       |registradorGenerico:PC|         ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|registradorGenerico:PC                 ; registradorGenerico ; work         ;
-;    |divisorGenerico:BASE_DE_TEMPO_1|   ; 11 (11)             ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|divisorGenerico:BASE_DE_TEMPO_1                ; divisorGenerico     ; work         ;
-;    |divisorGenerico:BASE_DE_TEMPO_2|   ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|divisorGenerico:BASE_DE_TEMPO_2                ; divisorGenerico     ; work         ;
-;    |muxLogico:MUX_BASE_TEMPO|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|muxLogico:MUX_BASE_TEMPO                       ; muxLogico           ; work         ;
-;    |seg7ALL:SEG7ALL|                   ; 16 (2)              ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|seg7ALL:SEG7ALL                                ; seg7ALL             ; work         ;
-;       |registradorGenerico:REGSEG7_DS| ; 0 (0)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_DS ; registradorGenerico ; work         ;
-;       |registradorGenerico:REGSEG7_US| ; 0 (0)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_US ; registradorGenerico ; work         ;
-;       |seg7:SEG7_DS|                   ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|seg7ALL:SEG7ALL|seg7:SEG7_DS                   ; seg7                ; work         ;
-;       |seg7:SEG7_US|                   ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|seg7ALL:SEG7ALL|seg7:SEG7_US                   ; seg7                ; work         ;
-+----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+---------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                  ;
++------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                       ; Entity Name         ; Library Name ;
++------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+---------------------+--------------+
+; |relogio                                 ; 1369 (0)            ; 1126 (0)                  ; 0           ; 0            ; 0       ; 0         ; 90   ; 0            ; |relogio                                                  ; relogio             ; work         ;
+;    |cpu:CPU|                             ; 220 (2)             ; 12 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU                                          ; cpu                 ; work         ;
+;       |ULAGenerico:ULA|                  ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|ULAGenerico:ULA                          ; ULAGenerico         ; work         ;
+;       |memoria:ROM|                      ; 193 (193)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|memoria:ROM                              ; memoria             ; work         ;
+;       |muxGenerico2:MUX|                 ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|muxGenerico2:MUX                         ; muxGenerico2        ; work         ;
+;       |registradorGenerico:ACU|          ; 2 (2)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|registradorGenerico:ACU                  ; registradorGenerico ; work         ;
+;       |registradorGenerico:PC|           ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|cpu:CPU|registradorGenerico:PC                   ; registradorGenerico ; work         ;
+;    |decodificador:DECODER|               ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|decodificador:DECODER                            ; decodificador       ; work         ;
+;    |divisorGenerico:BASE_DE_TEMPO_1|     ; 47 (47)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|divisorGenerico:BASE_DE_TEMPO_1                  ; divisorGenerico     ; work         ;
+;    |divisorGenerico:BASE_DE_TEMPO_2|     ; 26 (26)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|divisorGenerico:BASE_DE_TEMPO_2                  ; divisorGenerico     ; work         ;
+;    |divisorGenerico:BASE_DE_TEMPO_3|     ; 34 (34)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|divisorGenerico:BASE_DE_TEMPO_3                  ; divisorGenerico     ; work         ;
+;    |muxLogico:MUX_BASE_TEMPO_TESTE|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|muxLogico:MUX_BASE_TEMPO_TESTE                   ; muxLogico           ; work         ;
+;    |muxLogico:MUX_BASE_TEMPO|            ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|muxLogico:MUX_BASE_TEMPO                         ; muxLogico           ; work         ;
+;    |ram20:RAM_USAVEL|                    ; 968 (968)           ; 1024 (1024)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|ram20:RAM_USAVEL                                 ; ram20               ; work         ;
+;    |registradorGenerico:TIMER|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|registradorGenerico:TIMER                        ; registradorGenerico ; work         ;
+;    |seg7ALL:SEG7ALL|                     ; 58 (9)              ; 28 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|seg7ALL:SEG7ALL                                  ; seg7ALL             ; work         ;
+;       |registradorGenerico:REGSEG7_AMPM| ; 0 (0)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_AMPM ; registradorGenerico ; work         ;
+;       |registradorGenerico:REGSEG7_DH|   ; 0 (0)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_DH   ; registradorGenerico ; work         ;
+;       |registradorGenerico:REGSEG7_DM|   ; 0 (0)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_DM   ; registradorGenerico ; work         ;
+;       |registradorGenerico:REGSEG7_DS|   ; 0 (0)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_DS   ; registradorGenerico ; work         ;
+;       |registradorGenerico:REGSEG7_UH|   ; 0 (0)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_UH   ; registradorGenerico ; work         ;
+;       |registradorGenerico:REGSEG7_UM|   ; 0 (0)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_UM   ; registradorGenerico ; work         ;
+;       |registradorGenerico:REGSEG7_US|   ; 0 (0)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_US   ; registradorGenerico ; work         ;
+;       |seg7:SEG7_AMPM|                   ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|seg7ALL:SEG7ALL|seg7:SEG7_AMPM                   ; seg7                ; work         ;
+;       |seg7:SEG7_DH|                     ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|seg7ALL:SEG7ALL|seg7:SEG7_DH                     ; seg7                ; work         ;
+;       |seg7:SEG7_DM|                     ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|seg7ALL:SEG7ALL|seg7:SEG7_DM                     ; seg7                ; work         ;
+;       |seg7:SEG7_DS|                     ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|seg7ALL:SEG7ALL|seg7:SEG7_DS                     ; seg7                ; work         ;
+;       |seg7:SEG7_UH|                     ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|seg7ALL:SEG7ALL|seg7:SEG7_UH                     ; seg7                ; work         ;
+;       |seg7:SEG7_UM|                     ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|seg7ALL:SEG7ALL|seg7:SEG7_UM                     ; seg7                ; work         ;
+;       |seg7:SEG7_US|                     ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |relogio|seg7ALL:SEG7ALL|seg7:SEG7_US                     ; seg7                ; work         ;
++------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                  ;
-+-----------------------------------------------------------+---------------------------------------------------------+
-; Register name                                             ; Reason for Removal                                      ;
-+-----------------------------------------------------------+---------------------------------------------------------+
-; divisorGenerico:BASE_DE_TEMPO_1|contador[0]               ; Merged with divisorGenerico:BASE_DE_TEMPO_2|contador[0] ;
-; seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_DH|DOUT[0..3] ; Stuck at GND due to stuck port clock_enable             ;
-; seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_UH|DOUT[0..3] ; Stuck at GND due to stuck port clock_enable             ;
-; seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_DM|DOUT[0..3] ; Stuck at GND due to stuck port clock_enable             ;
-; seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_UM|DOUT[0..3] ; Stuck at GND due to stuck port clock_enable             ;
-; cpu:CPU|UCGenerico:UC|readEnable                          ; Stuck at GND due to stuck port data_in                  ;
-; cpu:CPU|UCGenerico:UC|OPCODE[0]                           ; Stuck at GND due to stuck port data_in                  ;
-; cpu:CPU|UCGenerico:UC|MUXJUMPHAB                          ; Stuck at GND due to stuck port data_in                  ;
-; cpu:CPU|UCGenerico:UC|HABANDCOMPARE                       ; Stuck at GND due to stuck port data_in                  ;
-; cpu:CPU|UCGenerico:UC|HABACU                              ; Merged with cpu:CPU|UCGenerico:UC|MUXHAB                ;
-; Total Number of Removed Registers = 22                    ;                                                         ;
-+-----------------------------------------------------------+---------------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                    ;
++---------------------------------------+-----------------------------------------------+
+; Register name                         ; Reason for Removal                            ;
++---------------------------------------+-----------------------------------------------+
+; registradorGenerico:TIMER|DOUT[0,1]   ; Stuck at GND due to stuck port data_in        ;
+; registradorGenerico:TIMER|DOUT[3]     ; Merged with registradorGenerico:TIMER|DOUT[2] ;
+; Total Number of Removed Registers = 3 ;                                               ;
++---------------------------------------+-----------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -297,14 +317,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 40    ;
+; Total registers                              ; 1126  ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 4     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 41    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 12    ;
+; Number of registers using Clock Enable       ; 1056  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |relogio|cpu:CPU|registradorGenerico:ACU|DOUT[0] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |relogio|cpu:CPU|registradorGenerico:ACU|DOUT[3] ;
+; 1:1                ; 8 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |relogio|cpu:CPU|ULAGenerico:ULA|Add0            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -331,11 +362,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: divisorGenerico:BASE_DE_TEMPO_1 ;
-+----------------+-------+-----------------------------------------------------+
-; Parameter Name ; Value ; Type                                                ;
-+----------------+-------+-----------------------------------------------------+
-; divisor        ; 11    ; Signed Integer                                      ;
-+----------------+-------+-----------------------------------------------------+
++----------------+----------+--------------------------------------------------+
+; Parameter Name ; Value    ; Type                                             ;
++----------------+----------+--------------------------------------------------+
+; divisor        ; 25000000 ; Signed Integer                                   ;
++----------------+----------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -344,8 +375,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                ;
 +----------------+-------+-----------------------------------------------------+
-; divisor        ; 1     ; Signed Integer                                      ;
+; divisor        ; 10000 ; Signed Integer                                      ;
 +----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divisorGenerico:BASE_DE_TEMPO_3 ;
++----------------+--------+----------------------------------------------------+
+; Parameter Name ; Value  ; Type                                               ;
++----------------+--------+----------------------------------------------------+
+; divisor        ; 500000 ; Signed Integer                                     ;
++----------------+--------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxLogico:MUX_BASE_TEMPO_TESTE ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; larguradados   ; 1     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -467,6 +518,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:TIMER ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +---------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_US ;
 +----------------+-------+--------------------------------------------------------------------+
@@ -525,6 +586,50 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; larguradados   ; 4     ; Signed Integer                                                     ;
 +----------------+-------+--------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: seg7ALL:SEG7ALL|registradorGenerico:REGSEG7_AMPM ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                       ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ram20:RAM_USAVEL ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; datawidth      ; 4     ; Signed Integer                       ;
+; addrwidth      ; 8     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "seg7ALL:SEG7ALL|seg7:SEG7_AMPM" ;
++----------+-------+----------+------------------------------+
+; Port     ; Type  ; Severity ; Details                      ;
++----------+-------+----------+------------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND                 ;
+; negativo ; Input ; Info     ; Stuck at GND                 ;
+; overflow ; Input ; Info     ; Stuck at GND                 ;
++----------+-------+----------+------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "seg7ALL:SEG7ALL|seg7:SEG7_NADA" ;
++----------+-------+----------+------------------------------+
+; Port     ; Type  ; Severity ; Details                      ;
++----------+-------+----------+------------------------------+
+; dadohex  ; Input ; Info     ; Stuck at VCC                 ;
+; apaga    ; Input ; Info     ; Stuck at GND                 ;
+; negativo ; Input ; Info     ; Stuck at GND                 ;
+; overflow ; Input ; Info     ; Stuck at GND                 ;
++----------+-------+----------+------------------------------+
 
 
 +----------------------------------------------------------+
@@ -604,6 +709,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+---------------+
 
 
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "decodificador:DECODER"                                                                     ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; habram_read ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:TIMER" ;
++-----------+-------+----------+------------------------+
+; Port      ; Type  ; Severity ; Details                ;
++-----------+-------+----------+------------------------+
+; din[3..2] ; Input ; Info     ; Stuck at VCC           ;
+; din[1..0] ; Input ; Info     ; Stuck at GND           ;
+; enable    ; Input ; Info     ; Stuck at VCC           ;
++-----------+-------+----------+------------------------+
+
+
 +------------------------------------------------------------+
 ; Port Connectivity Checks: "cpu:CPU|registradorGenerico:PC" ;
 +--------+-------+----------+--------------------------------+
@@ -618,24 +743,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 61                          ;
-; cycloneiii_ff         ; 40                          ;
-;     ENA               ; 12                          ;
-;     SLD               ; 4                           ;
-;     plain             ; 24                          ;
-; cycloneiii_lcell_comb ; 55                          ;
-;     arith             ; 21                          ;
-;         2 data inputs ; 17                          ;
-;         3 data inputs ; 4                           ;
-;     normal            ; 34                          ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 2                           ;
-;         4 data inputs ; 21                          ;
+; boundary_port         ; 90                          ;
+; cycloneiii_ff         ; 1126                        ;
+;     CLR               ; 1                           ;
+;     CLR SLD           ; 8                           ;
+;     ENA               ; 1024                        ;
+;     ENA CLR           ; 32                          ;
+;     plain             ; 61                          ;
+; cycloneiii_lcell_comb ; 1370                        ;
+;     arith             ; 65                          ;
+;         2 data inputs ; 62                          ;
+;         3 data inputs ; 3                           ;
+;     normal            ; 1305                        ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 37                          ;
+;         3 data inputs ; 288                         ;
+;         4 data inputs ; 975                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 1.81                        ;
+; Max LUT depth         ; 14.00                       ;
+; Average LUT depth     ; 8.11                        ;
 +-----------------------+-----------------------------+
 
 
@@ -644,7 +771,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -654,139 +781,116 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Oct  8 11:38:18 2019
+    Info: Processing started: Mon Oct 14 18:15:08 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RELOGIO_MK1 -c RELOGIO_MK1
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file RELOGIO_MK1.vhd
-    Info (12022): Found design unit 1: RELOGIO_MK1-ss File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/RELOGIO_MK1.vhd Line: 10
-    Info (12023): Found entity 1: RELOGIO_MK1 File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/RELOGIO_MK1.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file ULAGenerico.vhd
-    Info (12022): Found design unit 1: ULAGenerico-comportamento File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/ULAGenerico.vhd Line: 18
-    Info (12023): Found entity 1: ULAGenerico File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/ULAGenerico.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file UCGenerico.vhd
-    Info (12022): Found design unit 1: UCGenerico-comportamento File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/UCGenerico.vhd Line: 26
-    Info (12023): Found entity 1: UCGenerico File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/UCGenerico.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file somaConstanteGenerico.vhd
-    Info (12022): Found design unit 1: somaConstanteGenerico-comportamento File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/somaConstanteGenerico.vhd Line: 16
-    Info (12023): Found entity 1: somaConstanteGenerico File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/somaConstanteGenerico.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file seg7ALL.vhd
-    Info (12022): Found design unit 1: seg7ALL-FSMH File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/seg7ALL.vhd Line: 20
-    Info (12023): Found entity 1: seg7ALL File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/seg7ALL.vhd Line: 5
+Info (20032): Parallel compilation is enabled and will use up to 4 processors
+Info (12021): Found 2 design units, including 1 entities, in source file ram20.vhd
+    Info (12022): Found design unit 1: ram20-rtl File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/ram20.vhd Line: 20
+    Info (12023): Found entity 1: ram20 File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/ram20.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file relogio_mk1.vhd
+    Info (12022): Found design unit 1: RELOGIO_MK1-ss File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/RELOGIO_MK1.vhd Line: 10
+    Info (12023): Found entity 1: RELOGIO_MK1 File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/RELOGIO_MK1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ulagenerico.vhd
+    Info (12022): Found design unit 1: ULAGenerico-comportamento File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/ULAGenerico.vhd Line: 18
+    Info (12023): Found entity 1: ULAGenerico File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/ULAGenerico.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file ucgenerico.vhd
+    Info (12022): Found design unit 1: UCGenerico-comportamento File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/UCGenerico.vhd Line: 26
+    Info (12023): Found entity 1: UCGenerico File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/UCGenerico.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file somaconstantegenerico.vhd
+    Info (12022): Found design unit 1: somaConstanteGenerico-comportamento File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/somaConstanteGenerico.vhd Line: 16
+    Info (12023): Found entity 1: somaConstanteGenerico File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/somaConstanteGenerico.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file seg7all.vhd
+    Info (12022): Found design unit 1: seg7ALL-FSMH File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/seg7ALL.vhd Line: 19
+    Info (12023): Found entity 1: seg7ALL File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/seg7ALL.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file seg7.vhd
-    Info (12022): Found design unit 1: seg7-comportamento File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/seg7.vhd Line: 16
-    Info (12023): Found entity 1: seg7 File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/seg7.vhd Line: 4
+    Info (12022): Found design unit 1: seg7-comportamento File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/seg7.vhd Line: 16
+    Info (12023): Found entity 1: seg7 File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/seg7.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file relogio.vhd
-    Info (12022): Found design unit 1: relogio-comportamento File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 21
-    Info (12023): Found entity 1: relogio File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file registradorLogico.vhd
-    Info (12022): Found design unit 1: registradorLogico-comportamento File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/registradorLogico.vhd Line: 18
-    Info (12023): Found entity 1: registradorLogico File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/registradorLogico.vhd Line: 6
+    Info (12022): Found design unit 1: relogio-comportamento File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/relogio.vhd Line: 24
+    Info (12023): Found entity 1: relogio File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/relogio.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file registradorlogico.vhd
+    Info (12022): Found design unit 1: registradorLogico-comportamento File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/registradorLogico.vhd Line: 18
+    Info (12023): Found entity 1: registradorLogico File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/registradorLogico.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file registrador.vhd
-    Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/registrador.vhd Line: 18
-    Info (12023): Found entity 1: registradorGenerico File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/registrador.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file ORGenerico.vhd
-    Info (12022): Found design unit 1: ORGenerico-comportamento File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/ORGenerico.vhd Line: 15
-    Info (12023): Found entity 1: ORGenerico File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/ORGenerico.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico2.vhd
-    Info (12022): Found design unit 1: muxGenerico2-comportamento File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/muxGenerico2.vhd Line: 19
-    Info (12023): Found entity 1: muxGenerico2 File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/muxGenerico2.vhd Line: 4
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/registrador.vhd Line: 18
+    Info (12023): Found entity 1: registradorGenerico File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/registrador.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico2.vhd
+    Info (12022): Found design unit 1: muxGenerico2-comportamento File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/muxGenerico2.vhd Line: 19
+    Info (12023): Found entity 1: muxGenerico2 File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/muxGenerico2.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file mem_instrucoes.vhd
-    Info (12022): Found design unit 1: memoria-assincrona File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/mem_instrucoes.vhd Line: 19
-    Info (12023): Found entity 1: memoria File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/mem_instrucoes.vhd Line: 8
-Info (12021): Found 2 design units, including 1 entities, in source file IO.vhd
-    Info (12022): Found design unit 1: IO-FILSDELA File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/IO.vhd Line: 16
-    Info (12023): Found entity 1: IO File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/IO.vhd Line: 5
-Info (12021): Found 4 design units, including 1 entities, in source file divisorGenerico.vhd
-    Info (12022): Found design unit 1: divisorGenerico-divPor2 File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/divisorGenerico.vhd Line: 17
-    Info (12022): Found design unit 2: divisorGenerico-divPotenciaDe2 File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/divisorGenerico.vhd Line: 32
-    Info (12022): Found design unit 3: divisorGenerico-divInteiro File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/divisorGenerico.vhd Line: 47
-    Info (12023): Found entity 1: divisorGenerico File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/divisorGenerico.vhd Line: 6
+    Info (12022): Found design unit 1: memoria-assincrona File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/mem_instrucoes.vhd Line: 19
+    Info (12023): Found entity 1: memoria File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/mem_instrucoes.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file io.vhd
+    Info (12022): Found design unit 1: IO-FILSDELA File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/IO.vhd Line: 17
+    Info (12023): Found entity 1: IO File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/IO.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file divisorgenerico.vhd
+    Info (12022): Found design unit 1: divisorGenerico-divInteiro File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/divisorGenerico.vhd Line: 17
+    Info (12023): Found entity 1: divisorGenerico File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/divisorGenerico.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file decodificador.vhd
-    Info (12022): Found design unit 1: decodificador-comportamento File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/decodificador.vhd Line: 18
-    Info (12023): Found entity 1: decodificador File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/decodificador.vhd Line: 5
+    Info (12022): Found design unit 1: decodificador-comportamento File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/decodificador.vhd Line: 21
+    Info (12023): Found entity 1: decodificador File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/decodificador.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file cpu.vhd
-    Info (12022): Found design unit 1: cpu-estrutural File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/cpu.vhd Line: 22
-    Info (12023): Found entity 1: cpu File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/cpu.vhd Line: 5
+    Info (12022): Found design unit 1: cpu-estrutural File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/cpu.vhd Line: 25
+    Info (12023): Found entity 1: cpu File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/cpu.vhd Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file botoes.vhd
-    Info (12023): Found entity 1: botoes File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/botoes.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file ANDGenerico.vhd
-    Info (12022): Found design unit 1: ANDGenerico-comportamento File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/ANDGenerico.vhd Line: 18
-    Info (12023): Found entity 1: ANDGenerico File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/ANDGenerico.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file muxLogico.vhd
-    Info (12022): Found design unit 1: muxLogico-comportamento File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/muxLogico.vhd Line: 19
-    Info (12023): Found entity 1: muxLogico File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/muxLogico.vhd Line: 4
+    Info (12023): Found entity 1: botoes File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/botoes.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file andgenerico.vhd
+    Info (12022): Found design unit 1: ANDGenerico-comportamento File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/ANDGenerico.vhd Line: 18
+    Info (12023): Found entity 1: ANDGenerico File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/ANDGenerico.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file muxlogico.vhd
+    Info (12022): Found design unit 1: muxLogico-comportamento File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/muxLogico.vhd Line: 19
+    Info (12023): Found entity 1: muxLogico File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/muxLogico.vhd Line: 4
+Warning (12019): Can't analyze file -- file registrador_sclock.vhd is missing
 Info (12127): Elaborating entity "relogio" for the top level hierarchy
-Info (12128): Elaborating entity "IO" for hierarchy "IO:IO" File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 27
-Info (12129): Elaborating entity "divisorGenerico" using architecture "A:divpotenciade2" for hierarchy "divisorGenerico:BASE_DE_TEMPO_1" File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 35
-Info (12129): Elaborating entity "divisorGenerico" using architecture "A:divpotenciade2" for hierarchy "divisorGenerico:BASE_DE_TEMPO_2" File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 44
-Info (12128): Elaborating entity "muxLogico" for hierarchy "muxLogico:MUX_BASE_TEMPO" File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 53
-Info (12128): Elaborating entity "cpu" for hierarchy "cpu:CPU" File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 64
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "cpu:CPU|registradorGenerico:PC" File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/cpu.vhd Line: 34
-Info (12128): Elaborating entity "memoria" for hierarchy "cpu:CPU|memoria:ROM" File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/cpu.vhd Line: 47
-Info (12128): Elaborating entity "somaConstanteGenerico" for hierarchy "cpu:CPU|somaConstanteGenerico:ADDER" File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/cpu.vhd Line: 57
-Info (12128): Elaborating entity "UCGenerico" for hierarchy "cpu:CPU|UCGenerico:UC" File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/cpu.vhd Line: 68
-Info (12128): Elaborating entity "ULAGenerico" for hierarchy "cpu:CPU|ULAGenerico:ULA" File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/cpu.vhd Line: 81
-Info (12128): Elaborating entity "muxGenerico2" for hierarchy "cpu:CPU|muxGenerico2:MUX" File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/cpu.vhd Line: 93
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "cpu:CPU|registradorGenerico:ACU" File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/cpu.vhd Line: 105
-Info (12128): Elaborating entity "ANDGenerico" for hierarchy "cpu:CPU|ANDGenerico:AND1" File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/cpu.vhd Line: 119
-Info (12128): Elaborating entity "ORGenerico" for hierarchy "cpu:CPU|ORGenerico:OR1" File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/cpu.vhd Line: 127
-Info (12128): Elaborating entity "muxGenerico2" for hierarchy "cpu:CPU|muxGenerico2:MUXJMP" File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/cpu.vhd Line: 134
-Info (12128): Elaborating entity "decodificador" for hierarchy "decodificador:DECODER" File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 75
-Info (12128): Elaborating entity "seg7ALL" for hierarchy "seg7ALL:SEG7ALL" File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 86
-Info (12128): Elaborating entity "seg7" for hierarchy "seg7ALL:SEG7ALL|seg7:SEG7_US" File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/seg7ALL.vhd Line: 97
+Warning (10036): Verilog HDL or VHDL warning at relogio.vhd(27): object "HabRAM_read" assigned a value but never read File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/relogio.vhd Line: 27
+Info (12128): Elaborating entity "IO" for hierarchy "IO:IO" File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/relogio.vhd Line: 30
+Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico:BASE_DE_TEMPO_1" File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/relogio.vhd Line: 39
+Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico:BASE_DE_TEMPO_2" File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/relogio.vhd Line: 48
+Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico:BASE_DE_TEMPO_3" File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/relogio.vhd Line: 57
+Info (12128): Elaborating entity "muxLogico" for hierarchy "muxLogico:MUX_BASE_TEMPO_TESTE" File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/relogio.vhd Line: 66
+Info (12128): Elaborating entity "cpu" for hierarchy "cpu:CPU" File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/relogio.vhd Line: 88
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "cpu:CPU|registradorGenerico:PC" File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/cpu.vhd Line: 38
+Info (12128): Elaborating entity "memoria" for hierarchy "cpu:CPU|memoria:ROM" File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/cpu.vhd Line: 51
+Info (12128): Elaborating entity "somaConstanteGenerico" for hierarchy "cpu:CPU|somaConstanteGenerico:ADDER" File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/cpu.vhd Line: 61
+Info (12128): Elaborating entity "UCGenerico" for hierarchy "cpu:CPU|UCGenerico:UC" File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/cpu.vhd Line: 72
+Info (12128): Elaborating entity "ULAGenerico" for hierarchy "cpu:CPU|ULAGenerico:ULA" File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/cpu.vhd Line: 85
+Info (12128): Elaborating entity "muxGenerico2" for hierarchy "cpu:CPU|muxGenerico2:MUX" File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/cpu.vhd Line: 97
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "cpu:CPU|registradorGenerico:ACU" File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/cpu.vhd Line: 109
+Info (12128): Elaborating entity "ANDGenerico" for hierarchy "cpu:CPU|ANDGenerico:AND1" File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/cpu.vhd Line: 121
+Info (12128): Elaborating entity "muxGenerico2" for hierarchy "cpu:CPU|muxGenerico2:MUXJMP" File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/cpu.vhd Line: 128
+Info (12128): Elaborating entity "decodificador" for hierarchy "decodificador:DECODER" File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/relogio.vhd Line: 115
+Info (12128): Elaborating entity "seg7ALL" for hierarchy "seg7ALL:SEG7ALL" File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/relogio.vhd Line: 131
+Info (12128): Elaborating entity "seg7" for hierarchy "seg7ALL:SEG7ALL|seg7:SEG7_US" File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/seg7ALL.vhd Line: 108
+Info (12128): Elaborating entity "ram20" for hierarchy "ram20:RAM_USAVEL" File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/relogio.vhd Line: 148
 Warning (19016): Clock multiplexers are found and protected
-    Warning (19017): Found clock multiplexer muxLogico:MUX_BASE_TEMPO|saida_MUX File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/muxLogico.vhd Line: 15
+    Warning (19017): Found clock multiplexer muxLogico:MUX_BASE_TEMPO|saida_MUX File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/muxLogico.vhd Line: 15
+    Warning (19017): Found clock multiplexer muxLogico:MUX_BASE_TEMPO_TESTE|saida_MUX File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/muxLogico.vhd Line: 15
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "ram20:RAM_USAVEL|ram" is uninferred due to asynchronous read logic File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/ram20.vhd Line: 27
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HEX4[0]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HEX4[3]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HEX4[4]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HEX4[5]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HEX5[0]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HEX5[3]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HEX5[4]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 13
-    Warning (13410): Pin "HABRAM_OUT" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 15
-    Warning (13410): Pin "HAB_IO_OUT" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 15
-    Warning (13410): Pin "ENDR[1]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 16
-    Warning (13410): Pin "ENDR[2]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 16
-    Warning (13410): Pin "ENDR[4]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 16
-    Warning (13410): Pin "ENDR[5]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 16
-    Warning (13410): Pin "ENDR[6]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 16
-    Warning (13410): Pin "ENDR[7]" is stuck at GND File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 16
+    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/relogio.vhd Line: 14
+    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/relogio.vhd Line: 14
+    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/relogio.vhd Line: 14
+    Warning (13410): Pin "HEX1[3]" is stuck at VCC File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/relogio.vhd Line: 14
+    Warning (13410): Pin "HEX1[4]" is stuck at VCC File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/relogio.vhd Line: 14
+    Warning (13410): Pin "HEX1[5]" is stuck at VCC File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/relogio.vhd Line: 14
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/relogio.vhd Line: 14
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY3" File: /home/francisco/Documentos/Insper/6Semestre/DesignComputadores/PROJETO1/Projeto_relogio_DesComp/relogio.vhd Line: 12
-Info (21057): Implemented 127 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 58 output pins
-    Info (21061): Implemented 66 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 42 warnings
-    Info: Peak virtual memory: 989 megabytes
-    Info: Processing ended: Tue Oct  8 11:38:29 2019
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:25
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/relogio.vhd Line: 15
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/relogio.vhd Line: 15
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/relogio.vhd Line: 15
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/relogio.vhd Line: 15
+Info (21057): Implemented 2512 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 81 output pins
+    Info (21061): Implemented 2422 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 4805 megabytes
+    Info: Processing ended: Mon Oct 14 18:15:23 2019
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:26
 
 

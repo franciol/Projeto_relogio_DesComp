@@ -9,11 +9,14 @@ ENTITY cpu IS
         larguraBarramentoDados : NATURAL := 4
     );
     PORT (
+
+        LEDG : OUT std_logic_vector(7 DOWNTO 0);
+
         reset : IN STD_LOGIC;
         clk : IN STD_LOGIC;
         barramentoDadosEntrada : IN STD_LOGIC_VECTOR(larguraBarramentoDados - 1 DOWNTO 0);
         barramentoDadosSaida : OUT STD_LOGIC_VECTOR(larguraBarramentoDados - 1 DOWNTO 0);
-        barramentoEnderecos : OUT STD_LOGIC_VECTOR(larguraBarramentoEnderecos-1 DOWNTO 0);
+        barramentoEnderecos : OUT STD_LOGIC_VECTOR(larguraBarramentoEnderecos - 1 DOWNTO 0);
         readEnable : OUT STD_LOGIC;
         writeEnable : OUT STD_LOGIC
     );
@@ -26,11 +29,12 @@ ARCHITECTURE estrutural OF cpu IS
     SIGNAL saida_adder, saida_MUXJMP, saida_PC : STD_LOGIC_VECTOR(larguraBarramentoEnderecos - 1 DOWNTO 0);
     SIGNAL saida_MUX, saida_ACU, saida_ULA : STD_LOGIC_VECTOR((larguraBarramentoDados - 1) DOWNTO 0);
     SIGNAL seletorULA : STD_LOGIC_VECTOR(1 DOWNTO 0);
-    SIGNAL seletor_MUX, hab_ACU, hab_AND, hab_OR, saida_AND, saida_OR : STD_LOGIC;
-
+    SIGNAL seletor_MUX, hab_ACU, hab_AND, hab_OR, saida_AND : STD_LOGIC;
     -- ...
 
 BEGIN
+    LEDG <= saida_PC;
+
     PC : ENTITY work.registradorGenerico
         GENERIC MAP(
             larguraDados => larguraBarramentoEnderecos
@@ -114,8 +118,6 @@ BEGIN
             DIN => saida_MUX,
             DOUT => saida_ACU
         );
-
-
     AND1 : ENTITY work.ANDGenerico
         PORT MAP(
             ENTRADA_A => saida_ACU,
@@ -123,14 +125,6 @@ BEGIN
             SAIDA => saida_AND,
             CLK => clk
         );
-
-    OR1 : ENTITY work.ORGenerico
-        PORT MAP(
-            ENTRADA_A => saida_AND,
-            ENTRADA_B => hab_OR,
-            SAIDA => saida_OR
-        );
-
     MUXJMP : ENTITY work.muxGenerico2
         GENERIC MAP(
             larguraDados => larguraBarramentoEnderecos
@@ -139,7 +133,7 @@ BEGIN
         (
             entradaB_MUX => saida_imediata(7 DOWNTO 0),
             entradaA_MUX => saida_adder,
-            seletor_MUX => saida_OR,
+            seletor_MUX => saida_AND OR hab_OR,
             saida_MUX => saida_MUXJMP
         );
 

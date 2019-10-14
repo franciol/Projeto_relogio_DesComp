@@ -25,9 +25,9 @@ END ENTITY;
 
 ARCHITECTURE comportamento of UCGenerico IS
 BEGIN
-	PROCESS(ALL)
-	BEGIN
-		IF(rising_edge(clk)) THEN
+--	PROCESS(ALL)
+--	BEGIN
+--		IF(rising_edge(clk)) THEN
 			OPCODE <= barramentoEntrada(15 DOWNTO 14);
 			MUXJUMPHAB <= barramentoEntrada(13);
 			MUXHAB <= barramentoEntrada(12);
@@ -35,7 +35,7 @@ BEGIN
 			HABACU <= barramentoEntrada(10);
 			readEnable <= barramentoEntrada(8);
 			writeEnable <= barramentoEntrada(9);
-			
-		END IF;
-	END PROCESS;
+--			
+--		END IF;
+--	END PROCESS;
 END ARCHITECTURE;

@@ -8,26 +8,21 @@ ENTITY IO IS
     );
 
     PORT (
-        habilita, RESET_IN : IN STD_LOGIC;
-        saidaBotoes, RESET_OUT : OUT STD_LOGIC
+        habilita : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+        RESET_IN : IN STD_LOGIC;
+        saidaSW0,saidaSW1, RESET_OUT : OUT STD_LOGIC
     );
 END ENTITY;
 
 ARCHITECTURE FILSDELA OF IO IS
 BEGIN
-    PROCESS (ALL)
-    BEGIN
-        IF (habilita = '1') THEN
-            saidaBotoes <= '0';
-        ELSE
-            saidaBotoes <= '1';
-        END IF;
+    saidaSW0 <= '1' WHEN (habilita(0) = '1') ELSE -- ATIVA SAIDA BASE DE TEMPO
+    '0';
+    
+    saidaSW1 <= '1' WHEN (habilita(1) = '1') ELSE -- ATIVA SAIDA BASE DE TEMPO
+    '0';
 
-        IF (RESET_IN <= '1') THEN
-            RESET_OUT <= '0';
-        ELSE
-            RESET_OUT <= '1';
-        END IF;
+    RESET_OUT <= '1' WHEN (RESET_IN = '0') ELSE -- ATIVA RESET
+    '0';
         
-    END PROCESS;
 END ARCHITECTURE;

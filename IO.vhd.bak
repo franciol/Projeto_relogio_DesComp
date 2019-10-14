@@ -8,16 +8,22 @@ ENTITY IO IS
     );
 
     PORT (
-        habilita : IN STD_LOGIC;
-        saidaBotoes : OUT STD_LOGIC_VECTOR(quantidadeBotao - 1 DOWNTO 0)
+        habilita : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+        RESET_IN : IN STD_LOGIC;
+        saidaSW0,saidaSW1, RESET_OUT : OUT STD_LOGIC
     );
 END ENTITY;
 
 ARCHITECTURE FILSDELA OF IO IS
 BEGIN
-    IF (unsigned(habilita) = 1) THEN
-        saidaBotoes <= "1";
-    ELSE
-        saidaBotoes <= "0";
-    END IF;
+    saidaSW0 <= '1' WHEN (habilita(0) = '1') ELSE
+    '0';
+    
+    saidaSW1 <= '1' WHEN (habilita(1) = '1') ELSE
+    '0';
+
+    RESET_OUT <= '1' WHEN (RESET_IN = '0') ELSE
+    '0';
+        
+    END PROCESS;
 END ARCHITECTURE;
