@@ -46,7 +46,7 @@ ARCHITECTURE assincrona OF memoria IS
 
                 tmp(12) := x"0510"; -- READ TIMER
                 
-                tmp(13) := x"0827"; -- JUMP COMPARE PARA 2B
+                tmp(13) := x"0827"; -- JUMP COMPARE PARA 2B - INICIO CLOCK
                 tmp(14) := x"0000";                
 
                 tmp(15) := x"200B"; -- VAI PARA 0B
@@ -57,6 +57,10 @@ ARCHITECTURE assincrona OF memoria IS
                 tmp(18) := x"0216";
 
                 tmp(19) := x"0502";
+
+as
+a
+                aaaaa
                 tmp(20) := x"0215";
                 
                 tmp(21) := x"0503";
