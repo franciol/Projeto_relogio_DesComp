@@ -8,7 +8,7 @@ ENTITY decodificador IS
         rd : IN std_logic := '0';
         wr : IN std_logic := '0';
         clk : IN std_logic;
-        AMPM_HAB : IN std_logic;
+        SW, KEY : IN std_logic_vector(3 DOWNTO 0);
         mem : IN std_logic_vector(7 DOWNTO 0);
         ENTRADA_DE_DADOS_SEG, ENTRADA_DADOS_TIMER : IN std_logic_vector(3 DOWNTO 0);
         -- Output ports
@@ -32,8 +32,12 @@ BEGIN
     SAIDA_DE_DADOS <=
         ENTRADA_DE_DADOS_SEG WHEN (rd = '1' AND unsigned(mem) < 16 AND wr = '0') ELSE
         ENTRADA_DADOS_TIMER WHEN (rd = '1' AND unsigned(mem) = 16 AND wr = '0') ELSE
-        "1100" WHEN (rd = '1' AND unsigned(mem) = 25 AND wr = '0' AND AMPM_HAB = '1') ELSE
-        "0000" WHEN (rd = '1' AND unsigned(mem) = 25 AND wr = '0' AND AMPM_HAB = '0') ELSE
+        "1100" WHEN (rd = '1' AND unsigned(mem) = 25 AND wr = '0' AND SW(2) = '1') ELSE
+        "0000" WHEN (rd = '1' AND unsigned(mem) = 25 AND wr = '0' AND SW(2) = '0') ELSE
+        "1100" WHEN (rd = '1' AND unsigned(mem) = 26 AND wr = '0' AND SW(3) = '1') ELSE
+        "0000" WHEN (rd = '1' AND unsigned(mem) = 26 AND wr = '0' AND SW(3) = '0') ELSE
+        "1100" WHEN (rd = '1' AND unsigned(mem) = 27 AND wr = '0' AND KEY(3) = '1') ELSE
+        "0000" WHEN (rd = '1' AND unsigned(mem) = 27 AND wr = '0' AND KEY(3) = '0') ELSE
         "0000";
 
     Habtimer_write <=
