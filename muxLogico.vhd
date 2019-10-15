@@ -18,7 +18,7 @@ END ENTITY;
 
 ARCHITECTURE comportamento OF muxLogico IS
 BEGIN
-    saida_MUX <= 
+    saida_MUX <= -- SAIDA DA MUX
 	entradaA_MUX when (seletor_MUX = '0') else
 	entradaB_MUX;
 END ARCHITECTURE;

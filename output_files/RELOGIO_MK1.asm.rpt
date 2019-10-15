@@ -1,5 +1,5 @@
 Assembler report for RELOGIO_MK1
-Mon Oct 14 18:15:55 2019
+Tue Oct 15 19:44:14 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/output_files/RELOGIO_MK1.sof
+  5. Assembler Device Options: C:/Users/Francisco Ciol/Documents/PROJ/Projeto_relogio_DesComp/output_files/RELOGIO_MK1.sof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Oct 14 18:15:55 2019 ;
+; Assembler Status      ; Successful - Tue Oct 15 19:44:14 2019 ;
 ; Revision Name         ; RELOGIO_MK1                           ;
 ; Top-level Entity Name ; relogio                               ;
 ; Family                ; Cyclone IV E                          ;
@@ -52,23 +52,23 @@ refer to the applicable agreement for further details.
 +--------+---------+---------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Assembler Generated Files                                                         ;
-+-----------------------------------------------------------------------------------+
-; File Name                                                                         ;
-+-----------------------------------------------------------------------------------+
-; C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/output_files/RELOGIO_MK1.sof ;
-+-----------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                   ;
++---------------------------------------------------------------------------------------------+
+; File Name                                                                                   ;
++---------------------------------------------------------------------------------------------+
+; C:/Users/Francisco Ciol/Documents/PROJ/Projeto_relogio_DesComp/output_files/RELOGIO_MK1.sof ;
++---------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Francisco Ciol/Desktop/RELOGIO_MK1_restored/output_files/RELOGIO_MK1.sof ;
-+----------------+--------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                    ;
-+----------------+--------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x0068CA09                                                                                 ;
-; Checksum       ; 0x0068CA09                                                                                 ;
-+----------------+--------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/Francisco Ciol/Documents/PROJ/Projeto_relogio_DesComp/output_files/RELOGIO_MK1.sof ;
++----------------+------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                              ;
++----------------+------------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x00681A4C                                                                                           ;
+; Checksum       ; 0x00681A4C                                                                                           ;
++----------------+------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -77,13 +77,13 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Oct 14 18:15:52 2019
+    Info: Processing started: Tue Oct 15 19:44:11 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off RELOGIO_MK1 -c RELOGIO_MK1
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4696 megabytes
-    Info: Processing ended: Mon Oct 14 18:15:55 2019
+    Info: Peak virtual memory: 4691 megabytes
+    Info: Processing ended: Tue Oct 15 19:44:14 2019
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 

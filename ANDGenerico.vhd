@@ -20,7 +20,7 @@ BEGIN
     PROCESS (ALL)
     BEGIN
 
-        IF (unsigned(ENTRADA_A) > "1001" AND ENTRADA_B = '1') THEN
+        IF (unsigned(ENTRADA_A) > "1001" AND ENTRADA_B = '1') THEN -- COMPARA SE A ENTRADA E MAOIR QUE 9 E FAZ UM AND COM O SINAL DE JUMP COMPARE
             SAIDA <= '1';
         ELSE
             SAIDA <= '0';

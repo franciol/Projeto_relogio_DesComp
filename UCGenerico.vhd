@@ -28,7 +28,7 @@ BEGIN
 --	PROCESS(ALL)
 --	BEGIN
 --		IF(rising_edge(clk)) THEN
-			OPCODE <= barramentoEntrada(15 DOWNTO 14);
+			OPCODE <= barramentoEntrada(15 DOWNTO 14); -- REDISTRIBUIDOR DE SINAIS DA ROM PARA OS PONTOS DE CONTROLE
 			MUXJUMPHAB <= barramentoEntrada(13);
 			MUXHAB <= barramentoEntrada(12);
 			HABANDCOMPARE <= barramentoEntrada(11);

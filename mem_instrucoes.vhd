@@ -26,7 +26,7 @@ ARCHITECTURE assincrona OF memoria IS
         -- Inicializa os endereços e escreve ASSEMBLY!!!! :
         -- Salvando 8 no ACUMULADOR
         
-        tmp(0) := x"9400";  -- ZERO NO ACU
+         tmp(0) := x"9400";  -- ZERO NO ACU
 
         tmp(1) := x"0201";  -- ZERA A RAM
         tmp(2) := x"0202";
@@ -283,8 +283,6 @@ ARCHITECTURE assincrona OF memoria IS
                 tmp(155) := x"2010";
 
             tmp(156) := x"0000";
-
-
 
 
 
