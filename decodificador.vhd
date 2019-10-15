@@ -29,15 +29,15 @@ BEGIN
         '1' WHEN (wr = '1' AND unsigned(mem) < 16 AND rd = '0') ELSE -- HABILITA ESCREVER RAM
         '0';
 
-    SAIDA_DE_DADOS <=
-        ENTRADA_DE_DADOS_SEG WHEN (rd = '1' AND unsigned(mem) < 16 AND wr = '0') ELSE
-        ENTRADA_DADOS_TIMER WHEN (rd = '1' AND unsigned(mem) = 16 AND wr = '0') ELSE
-        "1100" WHEN (rd = '1' AND unsigned(mem) = 25 AND wr = '0' AND SW(2) = '1') ELSE
-        "0000" WHEN (rd = '1' AND unsigned(mem) = 25 AND wr = '0' AND SW(2) = '0') ELSE
-        "1100" WHEN (rd = '1' AND unsigned(mem) = 26 AND wr = '0' AND SW(3) = '1') ELSE
-        "0000" WHEN (rd = '1' AND unsigned(mem) = 26 AND wr = '0' AND SW(3) = '0') ELSE
-        "1100" WHEN (rd = '1' AND unsigned(mem) = 27 AND wr = '0' AND KEY(3) = '1') ELSE
-        "0000" WHEN (rd = '1' AND unsigned(mem) = 27 AND wr = '0' AND KEY(3) = '0') ELSE
+    SAIDA_DE_DADOS <= -- ESCOLHA DO ENTRADA DE DADOS NA CPU
+        ENTRADA_DE_DADOS_SEG WHEN (rd = '1' AND unsigned(mem) < 16 AND wr = '0') ELSE -- LEITURA DA RAM
+        ENTRADA_DADOS_TIMER WHEN (rd = '1' AND unsigned(mem) = 16 AND wr = '0') ELSE -- LEITURA DO TIMER
+        "1100" WHEN (rd = '1' AND unsigned(mem) = 25 AND wr = '0' AND SW(2) = '1') ELSE --LEITURA DOS IOs
+        "0000" WHEN (rd = '1' AND unsigned(mem) = 25 AND wr = '0' AND SW(2) = '0') ELSE --LEITURA DOS IOs
+        "1100" WHEN (rd = '1' AND unsigned(mem) = 26 AND wr = '0' AND SW(3) = '1') ELSE --LEITURA DOS IOs
+        "0000" WHEN (rd = '1' AND unsigned(mem) = 26 AND wr = '0' AND SW(3) = '0') ELSE --LEITURA DOS IOs
+        "1100" WHEN (rd = '1' AND unsigned(mem) = 27 AND wr = '0' AND KEY(3) = '1') ELSE --LEITURA DOS IOs
+        "0000" WHEN (rd = '1' AND unsigned(mem) = 27 AND wr = '0' AND KEY(3) = '0') ELSE --LEITURA DOS IOs
         "0000";
 
     Habtimer_write <=
@@ -45,6 +45,6 @@ BEGIN
         '0';
 
     Hab7seg_write <=
-        '1' WHEN (wr = '1' AND unsigned(mem) > 16 AND unsigned(mem) <= 32 AND rd = '0') ELSE -- HABILITA LER TIMER
+        '1' WHEN (wr = '1' AND unsigned(mem) > 16 AND unsigned(mem) <= 32 AND rd = '0') ELSE -- HABILITA ESCREVER NO 7SEG
         '0';
 END ARCHITECTURE;

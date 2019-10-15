@@ -35,7 +35,7 @@ ARCHITECTURE estrutural OF cpu IS
 BEGIN
     LEDG <= saida_PC;
 
-    PC : ENTITY work.registradorGenerico
+    PC : ENTITY work.registradorGenerico -- PROGRAM COUNTER
         GENERIC MAP(
             larguraDados => larguraBarramentoEnderecos
         )
@@ -48,7 +48,7 @@ BEGIN
             DOUT => saida_PC
         );
 
-    ROM : ENTITY work.memoria
+    ROM : ENTITY work.memoria  -- ROM 
         GENERIC MAP(
             dataWidth => larguraBarramentoImediato,
             addrWidth => larguraBarramentoEnderecos
@@ -58,7 +58,7 @@ BEGIN
             Dado => saida_imediata
         );
 
-    ADDER : ENTITY work.somaConstanteGenerico
+    ADDER : ENTITY work.somaConstanteGenerico -- SOMADOR DO PROGRAM COUNTER
         GENERIC MAP(
             larguraDados => larguraBarramentoEnderecos,
             incremento => 1
@@ -69,7 +69,7 @@ BEGIN
             saida => saida_adder
         );
 
-    UC : ENTITY work.UCGenerico
+    UC : ENTITY work.UCGenerico  -- REDISTRIBUIDOR DE SINAIS DA SAIDA DA ROM
         PORT MAP(
             clk => clk,
             barramentoEntrada => saida_imediata,
@@ -82,7 +82,7 @@ BEGIN
             writeEnable => writeEnable
         );
 
-    ULA : ENTITY work.ULAGenerico
+    ULA : ENTITY work.ULAGenerico  -- ULA
         GENERIC MAP(
             larguraDados => larguraBarramentoDados
         )
@@ -94,7 +94,7 @@ BEGIN
             CLK => clk
         );
 
-    MUX : ENTITY work.muxGenerico2
+    MUX : ENTITY work.muxGenerico2 -- MUX PARA ESCOLHA ENTRE RAM OU SAIDA DA ULA, PARA ESCREVER NO ACUMULADOR
         GENERIC MAP(
             larguraDados => larguraBarramentoDados
         )
@@ -106,7 +106,7 @@ BEGIN
             saida_MUX => saida_MUX
         );
 
-    ACU : ENTITY work.registradorGenerico
+    ACU : ENTITY work.registradorGenerico -- ACUMULADOR
         GENERIC MAP(
             larguraDados => larguraBarramentoDados
         )
@@ -118,14 +118,14 @@ BEGIN
             DIN => saida_MUX,
             DOUT => saida_ACU
         );
-    AND1 : ENTITY work.ANDGenerico
+    AND1 : ENTITY work.ANDGenerico -- COMPARADOR E AND PARA ATIVAR O JUMP 
         PORT MAP(
             ENTRADA_A => saida_ACU,
             ENTRADA_B => hab_AND,
             SAIDA => saida_AND,
             CLK => clk
         );
-    MUXJMP : ENTITY work.muxGenerico2
+    MUXJMP : ENTITY work.muxGenerico2 -- MUX PARA SELECIONAR ENTRE PUXAR O ENDERECO DO PC OU DA ROM (MUXJUMP)
         GENERIC MAP(
             larguraDados => larguraBarramentoEnderecos
         )
@@ -137,6 +137,6 @@ BEGIN
             saida_MUX => saida_MUXJMP
         );
 
-    barramentoDadosSaida <= saida_ACU;
-    barramentoEnderecos <= saida_imediata(7 DOWNTO 0);
+    barramentoDadosSaida <= saida_ACU; -- SAIDA DO ACUMULADOR PARA FORA DA CPU
+    barramentoEnderecos <= saida_imediata(7 DOWNTO 0); -- SAIDA DO ENDERECO DE ACESSO PARA FORA DA CPU
 END ARCHITECTURE;

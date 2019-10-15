@@ -21,6 +21,7 @@ ARCHITECTURE FSMH OF seg7ALL IS
     SIGNAL dado_AMPM, dado_US, dado_DS, dado_UM, dado_DM, dado_UH, dado_DH : STD_LOGIC_VECTOR(3 DOWNTO 0);
 BEGIN
 
+-- REGISTRADORES DE CADA 7 SEGMENTOS
     REGSEG7_US : ENTITY work.registradorGenerico
         GENERIC MAP(
             larguraDados => 4
@@ -104,7 +105,9 @@ BEGIN
             CLK => CLK,
             RST => RESET
         );
-
+		  
+		  
+-- TRADUTORES DE SAIDA DOS 7 SEGMENTOS UTILIZADOS
     SEG7_US : ENTITY work.seg7
         PORT MAP(
             dadoHex => dado_US,
@@ -176,25 +179,25 @@ BEGIN
             overflow => '0',
             saida7seg => saida7seg_AMPM
         );
-    hab_US <=
+    hab_US <= -- HABILITACAO DE ESCRITA NO REG DE UNIDADE DE SEGUNDO
         '1' WHEN (endereco7SEG = "00010001" AND ENABLE = '1') ELSE
         '0';
-    hab_DS <=
+    hab_DS <= -- HABILITACAO DE ESCRITA NO REG DE DEZENA DE SEGUNDO
         '1' WHEN (endereco7SEG = "00010010" AND ENABLE = '1') ELSE
         '0';
-    hab_UM <=
+    hab_UM <= -- HABILITACAO DE ESCRITA NO REG DE UNIDADE DE MINUTO
         '1' WHEN (endereco7SEG = "00010011" AND ENABLE = '1') ELSE
         '0';
-    hab_DM <=
+    hab_DM <= -- HABILITACAO DE ESCRITA NO REG DE DEZENA DE MINUTO
         '1' WHEN (endereco7SEG = "00010100" AND ENABLE = '1') ELSE
         '0';
-    hab_UH <=
+    hab_UH <= -- HABILITACAO DE ESCRITA NO REG DE UNIDADE DE HORA
         '1' WHEN (endereco7SEG = "00010101" AND ENABLE = '1') ELSE
         '0';
-    hab_DH <=
+    hab_DH <= -- HABILITACAO DE ESCRITA NO REG DE DEZENA DE HORA
         '1' WHEN (endereco7SEG = "00010110" AND ENABLE = '1') ELSE
         '0';
-    hab_AMPM <=
+    hab_AMPM <= -- HABILITACAO DE ESCRITA NO REG DE AM/PM
         '1' WHEN (endereco7SEG = "00011000" AND ENABLE = '1') ELSE
         '0';
 END ARCHITECTURE;
